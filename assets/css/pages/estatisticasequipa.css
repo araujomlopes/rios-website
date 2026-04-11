@@ -1,0 +1,65 @@
+/* =========================================================
+   COLUNA: POSIÇÃO / RANK
+   ========================================================= */
+.col-rank {
+  width:40px;
+  color:#9aa3b2;
+  font-weight:600;
+}
+
+/* =========================================================
+   COLUNA: EQUIPA
+   ========================================================= */
+.col-team {
+  flex:1;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  min-width:180px;
+}
+
+/* Logo da equipa */
+.team-logo {
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+.team-logo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Informações da equipa */
+.team-info {
+  display:flex;
+  flex-direction:column;
+}
+
+
+
+.team-country {
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* =========================================================
+   COLUNAS DE ESTATÍSTICAS
+   ========================================================= */
+.col-stat {
+  width:60px;
+  text-align:center;
+  font-weight:700;
+  color:#0a0f1c;
+}
+
+/* Destaque para número de jogos */
+.col-stat.matches {
+  font-size:16px;
+  font-weight:800;
+}
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <!-- VIEWPORT CORRETO (Firefox Mobile safe) -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta
+    name="description"
+    content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design."
+  />
+  <title>Rios — Calendário</title>
+
+    
+
+  <!-- GOOGLE FONTS (USTYLE) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS BASE -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- CSS DA PÁGINA -->
+  <link rel="stylesheet" href="assets/css/pages/jogos.css">
+
+  <!-- FIXES GLOBAIS (SEMPRE POR ÚLTIMO) -->
+  <link rel="stylesheet" href="assets/css/firefox-fixes.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <div id="header"></div>
+  <!-- ================= HEADER ================= -->
+
+  <!-- ================= MAIN ================= -->
+  <main id="main">
+
+    <!-- TÍTULO DA PÁGINA -->
+    <div class="page-header_title">
+      <h2 class="teams-title">Calendário</h2>
+    </div>
+
+    <!-- ================= FILTROS ================= -->
+    <div class="bl-filters-container">
+
+      <!-- Temporada -->
+      
+
+      <!-- Jornada -->
+      <div class="bl-select-wrapper">
+        <label class="bl-select-label">Seleccionar Jornada</label>
+        <select id="matchdaySelect" class="bl-select">
+          <option value="all">Todas Jornada</option>
+        </select>
+        <div class="bl-select-underline"></div>
+      </div>
+
+      <!-- Clube -->
+      <div class="bl-select-wrapper">
+        <label class="bl-select-label">Seleccionar Clube</label>
+        <select id="clubSelect" class="bl-select">
+          <option value="all">Todos os Clubes</option>
+        </select>
+        <div class="bl-select-underline"></div>
+      </div>
+
+    </div>
+    <!-- ================= FILTROS ================= -->
+
+    <!-- ================= JOGOS ================= -->
+    <div class="topscore-container">
+      <!-- Conteúdo gerado dinamicamente via jogos.js -->
+      <div id="jornadas-container"></div>
+    </div>
+    <!-- ================= JOGOS ================= -->
+
+  </main>
+  <!-- ================= MAIN ================= -->
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+  <!-- ================= FOOTER ================= -->
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="assets/js/pages/jogos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+
+
+
+
+  <script src="assets/js/pages/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* ===========================
+   Container principal
+=========================== */
+.teams-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+/* ===========================
+   Títulos
+=========================== */
+.teams-title {
+  font-size: 28px;
+  margin: 0 0 6px 0;
+  color: var(--text);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.teams-subtitle {
+  font-size: 18px;
+  color: var(--text-topbar);
+  margin-bottom: 30px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===========================
+   Grid de Equipas
+=========================== */
+.teams-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Mobile-first: 1 card por linha */
+  box-sizing: border-box;
+}
+
+/* Tablet: 2 cards por linha */
+@media(min-width: 700px) {
+  .teams-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Desktop: 3 cards por linha */
+@media(min-width: 1024px) {
+  .teams-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===========================
+   Links dos cards
+=========================== */
+.team-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===========================
+   Card da equipa
+=========================== */
+.team-card {
+  background: var(--surface);
+  border-radius: 0.4rem;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0; /* Permite encolher no Firefox */
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.09);
+}
+
+.team-card > img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Info da equipa
+=========================== */
+.team-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  min-width: 0; /* Correção Firefox */
+}
+
+.team-name {
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: -0.2px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.team-stadium {
+  font-size: 15px;
+  color: #6d7280;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.stadium-icon {
+  width: 20px;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Responsivo para telas pequenas
+=========================== */
+@media (max-width: 540px) {
+  .team-card {
+    gap: 16px;
+    padding: 14px 16px;
+  }
+  .team-card > img {
+    width: 60px;
+    height: 60px;
+  }
+  .team-name {
+    font-size: 18px;
+  }
+  .team-stadium {
+    font-size: 14px;
+  }
+}
+
+
+
+
+

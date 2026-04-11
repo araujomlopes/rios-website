@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificação de Inscrição</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    .verify-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 160px);
+      background: #f4f6f8;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 420px;
+      width: 100%;
+      padding: 40px 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #0b5ed7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #094cb1;
+    }
+
+    .success { color: #198754; }
+    .warning { color: #fd7e14; }
+    .error   { color: #dc3545; }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<main class="verify-wrapper">
+  <div class="card">
+    <div id="icon" class="icon">⏳</div>
+    <h1 id="title">A verificar…</h1>
+    <p id="message">Por favor aguarde.</p>
+
+    <a href="index.html" class="btn">Voltar ao website</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<!-- Scripts globais -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/header-nav.js"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const bi = params.get("bi");
+
+  const icon    = document.getElementById("icon");
+  const title   = document.getElementById("title");
+  const message = document.getElementById("message");
+
+  function sucesso() {
+    icon.textContent = "✔️";
+    icon.className = "icon success";
+    title.textContent = "Inscrição confirmada";
+    message.textContent = "A sua inscrição foi verificada com sucesso.";
+  }
+
+  function jaConfirmado() {
+    icon.textContent = "ℹ️";
+    icon.className = "icon warning";
+    title.textContent = "Já confirmado";
+    message.textContent = "Esta inscrição já tinha sido confirmada anteriormente.";
+  }
+
+  function erro() {
+    icon.textContent = "✖️";
+    icon.className = "icon error";
+    title.textContent = "Link inválido";
+    message.textContent = "Dados de verificação não encontrados.";
+  }
+
+  if (!bi) {
+    erro();
+  } else {
+    fetch(`https://script.google.com/macros/s/AKfycbxhjyI95U_OeT9OLWVgKrog_NqGdjgjdCAcf5qzcUmZvQAcAy3dLDGkaH-uVKiznGt4gg/exec?bi=${encodeURIComponent(bi)}`)
+      .then(r => r.text())
+      .then(status => {
+        if(status === "OK") sucesso();
+        else if(status === "ALREADY") jaConfirmado();
+        else erro();
+      })
+      .catch(erro);
+  }
+</script>
+
+<script src="assets/js/pages/theme.js"></script>
+
+</body>
+</html>

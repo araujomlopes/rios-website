@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Website Leve e Responsivo</title>
+
+   
+
+  <!-- Google Fonts (RIOS-style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Geral -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/tabeladepontuacao.css">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <div id="header"></div>
+  <!-- ========== HEADER ========== -->
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+
+    <!-- TABELA DE PONTUAÇÃO -->
+    <div class="tabelapontos-container">
+      <h2 class="teams-title">Tabela</h2>
+
+      <!--ENTRELAG TRACK CONDITIONS -->
+      <div class="entrelag-track-bar">
+
+        <!-- Condição do tempo -->
+        <div class="track-item weather">
+          <!-- O ícone será preenchido dinamicamente pelo weather.js -->
+          <span class="weather-icon" id="weather-icon"></span>
+          <div class="weather-info">
+            <span class="label" id="weather-label">--</span>
+            <span class="value" id="weather-temp">--</span>
+          </div>
+        </div>
+
+        <span class="track-sep"></span>
+
+        <!-- Condições da quadra -->
+        <div class="track-item">
+          <span class="label">Quadra</span>
+          <span class="value">Seca</span>
+        </div>
+
+        <span class="track-sep"></span>
+
+        <!-- Temperatura do ar -->
+        <div class="track-item">
+          <span class="label">Temperatura</span>
+          <span class="value" id="air-temp">--</span>
+        </div>
+
+        <span class="track-sep"></span>
+
+        <!-- Humidade -->
+        <div class="track-item">
+          <span class="label">Humidade</span>
+          <span class="value" id="humidity">--</span>
+        </div>
+
+      </div>
+
+      <section class="rioslag-table">
+
+        <!-- HEADER -->
+        <div class="header-box">
+          <div class="tabs">
+            <button class="tab active" data-view="simplified">Tabela resumida</button>
+            <button class="tab" data-view="full">Tabela completa</button>
+          </div>
+        </div>
+
+        <!-- TABELA RESUMIDA -->
+        <table id="simplified" class="active">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Equipa</th>
+              <th>P</th>
+              <th>+/-</th>
+              <th>Pts</th>
+              <th class="text-right">Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- preenchido via JS -->
+          </tbody>
+        </table>
+
+        <!-- TABELA COMPLETA -->
+        <div class="scroll-wrapper">
+          <table id="full">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Logo</th>
+                <th>Equipa</th>
+                <th>Jogos</th>
+                <th>Vitórias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Golos Mar</th>
+                <th>Golos Sof</th>
+                <th>Dif Golos</th>
+                <th>Pontos</th>
+                <th class="text-right">Form</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- preenchido via JS -->
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- FOOTER (injetado via JS) -->
+  <div id="footer"></div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/pages/tabeladepontuacao.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/pages/theme.js"></script>
+</body>
+</html>

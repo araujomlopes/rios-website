@@ -1,0 +1,2229 @@
+
+
+
+    /* ===== JOGADORES DESTAQUE INICIO===== */
+
+
+/* =====================================================
+   Página: Melhores Marcadores
+   Componente: UFA Style Player Carousel
+   Descrição: Carousel de jogadores com estatísticas
+   ===================================================== */
+
+
+    
+    /* ===== CONTAINER PRINCIPAL ===== */
+    .rioslag-carousel {
+      
+      padding: 12px;
+      padding-top: 12px;
+      padding-bottom: 25px;
+      color: var(--text);
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+
+      .rioslag-carousel2 {
+      padding: 12px;
+      color: var(--text);
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .entrelag-calendar-sync {
+      padding: 12px;
+      color: var(--text);
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    /* ===== HEADER ===== */
+    .carousel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .carousel-header h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 20px 0 16px;
+    }
+
+    .carousel-header .view-all {
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    /* ===== ÁREA DO SLIDE ===== */
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding: 8px;
+      scrollbar-width: none;
+      cursor: grab;
+    }
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* ===== CARTÃO DO JOGADOR ===== */
+    .player-card {
+      background: var(--card);
+
+      flex: 0 0 267px;
+      height: 300px;
+      text-align: center;
+      box-shadow: 0 6px 12px #0000001a;
+      transition: 0.2s ease;
+      position: relative;
+      user-select: none;
+    }
+    .player-card:hover {
+      transform: scale(1.03);
+      border-color: #0232ff;
+      box-shadow: 0 8px 16px #00000026;
+    }
+
+    /* ===== FOTO + LOGO ===== */
+    .player-image-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 16px auto 0;
+    }
+    .player-image-wrapper img.player-photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .player-image-wrapper img.team-logo {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+    }
+
+    .player-card h3 {
+      font-size: var(--fs-lg);
+      margin: 12px 0 4px;
+      font-weight: 700;
+    }
+
+    .player-card .position {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== ESTATÍSTICAS ===== */
+    .stats {
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 12px;
+      width: 85%;
+      margin: 0 auto;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    .stats div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .stats .golos_estat {
+      font-size: 20px;
+      color: var(--border-soft);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* ===== SETAS DO SLIDER ===== */
+    .carousel-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 22px;
+      color: var(--primary);
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      transition: 0.2s ease;
+      z-index: 2;
+    }
+    .carousel-btn:hover {
+      background: #0232ff;
+      color: #fff;
+    }
+    .left {
+      left: -10px;
+    }
+    .right {
+      right: -10px;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-btn { display: none; }
+    }
+
+    
+   
+
+   /* =====================================================
+   Página: Melhores Marcadores
+   Componente: UFA Style Player Carousel
+   Descrição: Carousel de jogadores com estatísticas
+   ===================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* ===== Estilo do Carrossel de Melhores Marcadores ===== */
+
+/* GRID */
+  .official-grid { 
+    display: grid; 
+    gap: .8rem; 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  /* CARD */
+ 
+
+  .rider-card {
+    border: 1px solid var(--border-soft);
+    position: relative;
+    border-radius: .4rem;
+    overflow: hidden;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+}
+
+  /* DESKTOP — imagem maior estilo Rios, com espaçamento no topo */
+  .rider-img {
+    filter: ;
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+
+    top: 20px;                     /* evita tocar no topo */
+    height: calc(100% - 20px);     /* ajusta altura mantendo proporção */
+
+    width: 260px;
+    max-width: 55%;
+  }
+
+  .rider-img img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+  }
+
+  .rider-content {
+    position: relative;
+    z-index: 5;
+    color: #666;
+    width: 80%;
+    padding: 1.6rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border-radius: .4rem;
+    min-height: 14.2rem;
+  }
+
+ 
+  .rider-name {
+    font-size: 22px;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+  .rider-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .flag { width: 20px; height: auto; }
+
+  .rider-number {
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
+    z-index: 10;
+    font-size: 32px;
+    font-weight:700;
+    color: #0232ff;
+    background: ;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* TABLET */
+  @media (max-width: 992px) { 
+    .official-grid { grid-template-columns: repeat(2, 1fr); } 
+    .rider-card { height: 100%; } 
+    
+    .rider-img { 
+      width: 210px;
+      max-width: 60%;
+      right: 6px;
+
+      top: 22px;                    /* evita tocar no topo */
+      height: calc(100% - 22px);
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 600px) { 
+    .official-grid { grid-template-columns: 1fr; } 
+    .rider-card { height: 100%; } 
+    .rider-name { font-size: 20px; } 
+    
+    .rider-img { 
+      width: 170px;
+      max-width: 65%;
+      right: 4px;
+
+      top: 26px;                    /* evita tocar no topo */
+      height: calc(100% - 26px);
+    }
+  }
+  
+   /* ===== Estilo do Carrossel de Melhores Marcadores ===== */
+
+
+
+
+
+
+   /* ======== PAGE HEADER ======== */
+.page-header_title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 35px 10px;
+}
+
+/* ======== BARRA DE PESQUISA ======== */
+#ts-search {
+  padding: 12px 16px;
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid #d0d4e4;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+
+.page-header_title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 35px; /* inclui padding-bottom que estava duplicado no inline */
+}
+
+.maioresmarcadores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+.ts-search-container {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+#ts-search {
+  padding: 12px 16px;
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid #d0d4e4;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.rio-footer .rio-brand .muted {
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+
+    /* ===== JOGADORES DESTAQUE FIM===== */
+
+
+
+
+
+
+
+
+
+
+/* ===== JORNADAS INICIO===== */
+
+  .matches{
+  background: var(--surface);
+  border-radius:16px;
+  padding:1.25rem 1rem 1.5rem;
+}
+
+.matches-header h2{
+  margin:0 0 1rem;
+  font-size:1.35rem;
+  font-weight:700;
+  color: var(--text);
+}
+
+.matches-wrapper{
+  position:relative;
+}
+
+.matches-track {
+  display: flex;
+  gap: 0.75rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  /* 🔥 ESSENCIAL MOBILE */
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+
+  scrollbar-width: none;
+}
+
+.matches-track::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+.match-card{
+  min-width:190px;
+  background: var(--surface);
+  padding:0.75rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.35rem;
+  box-shadow: 0 4px 20px #000e140d;
+}
+
+.match-status{
+  font-size:0.75rem;
+  color: var(--text-topbar);
+  margin-bottom:0.25rem;
+}
+
+.match-status.live{
+  color: var(--accent);
+  font-weight:600;
+}
+
+.match-teams{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.team{
+  display:flex;
+  align-items:center;
+  gap:0.4rem;
+  font-size:0.85rem;
+  color: var(--text);
+  font-weight:600;
+  white-space:nowrap;
+}
+
+
+
+.team img{
+  width:18px;
+  height:18px;
+  object-fit:contain;
+}
+
+.score{
+  font-weight:700;
+  font-size:0.9rem;
+  color:#0f172a;
+}
+
+/* Setas */
+.matches-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem;
+  color:#2563eb;
+  z-index:2;
+}
+
+.matches-arrow.left{ left:-18px; }
+.matches-arrow.right{ right:-18px; }
+
+.matches-arrow:hover{
+  background:#f0f4ff;
+}
+
+/* ===== JORNADAS FIM===== */
+
+
+
+
+
+
+
+
+
+
+
+.matches-wrapper{
+  position: relative;
+  padding-top: calc(3em + 4px); /* espaço dos botões + gap para os cards */
+}
+
+/* ===== SETAS PROPORCIONAIS ===== */
+.matches-arrow{
+  position: absolute;
+  top: 0;
+  transform: none;
+
+  width: 3em;
+  height: 2em;
+
+  border: none;
+  border-radius: 0;
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 1.2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 10;
+
+  transition: background 0.2s ease;
+  
+}
+
+/* esquerda */
+.matches-arrow.left{
+  left: auto !important;
+  right: calc(3em + 12px);
+}
+
+/* direita */
+.matches-arrow.right{
+  right: 0;
+}
+
+/* hover */
+.matches-arrow:hover{
+  background: var(--accent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== PONTUACAO INICIO===== */
+/* ==============================
+   STANDINGS
+================================ */
+/* ===== PONTUACAO INICIO===== */
+/* ==============================
+   STANDINGS
+================================ */
+
+.standings{
+  padding:3rem 1rem;
+  background:#fff;
+  font-family:Inter, Arial, sans-serif;
+}
+
+.standings-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:2rem;
+}
+
+/* Wrapper */
+.standings-wrapper{
+  position:relative;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+/* Track */
+.standings-track{
+  margin-bottom: 15px;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  justify-content: flex-start; /* mobile */
+
+  padding-left: 10px;
+  scroll-padding-left: 10px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (min-width: 768px){
+  .standings-track{
+    justify-content: center;   /* centra no PC */
+    overflow-x: hidden;        /* remove scroll */
+    padding-left: 0;
+  }
+}
+
+
+
+/* Remove scrollbar no Chrome, Safari e Edge */
+.standings-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.standing-card{
+  min-width:140px;
+  background: var(--surface);
+  padding:1rem .75rem;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  flex: 0 0 auto;
+  align-items:center;
+  gap:.5rem;
+  box-shadow: 0 4px 20px #000e140d;
+}
+
+/* Position */
+.position{
+  font-size:14px;
+  font-weight:600;
+  color: var(--text-topbar);
+}
+
+/* Logo */
+.standing-card img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+}
+
+/* Team */
+
+
+/* Points */
+.points{
+  font-size:14px;
+  color: var(--text-topbar);
+}
+
+/* Arrows */
+.standings-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  cursor:pointer;
+  font-size:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+.standings-arrow.left{ left:-18px; }
+.standings-arrow.right{ right:-18px; }
+
+/* View full */
+.view-full{
+  display:block;
+  margin-top:1rem;
+  text-align:right;
+  color:#d00;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ===== PONTUACAO FIM===== */
+
+/* ===== PONTUACAO FIM===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   League Top Players Style
+   ===================================================== */
+.top-players-track {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0 0.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* remove scrollbar no Chrome/Edge/Safari */
+.top-players-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* remove scrollbar no Firefox */
+.top-players-track {
+  scrollbar-width: none;
+}
+
+/* CARD UFA STYLE */
+.player-shield {
+  width: 108px; /* ligeiramente menor  para fidelidade UFA */
+  flex: 0 0 auto;
+}
+
+/* shield formato UFA */
+.shield {
+  position: relative;
+  background: var(--surface);
+  border-radius: 0 0 36px 36px; /* arredonda só a parte de baixo */
+  height: 170px;
+  padding-top: 0.6rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.shield:hover {
+  transform: translateY(-4px); /* leve hover */
+}
+
+/* NOME */
+.player-name {
+  text-align: center;
+  font-size: 0.68rem;
+  line-height: 1.1;
+  color: var(--text); 
+}
+
+.player-name span {
+  display: block;
+  font-weight: 400;
+}
+
+.player-name strong {
+  display: block;
+  font-weight: 600;
+}
+
+/* FOTO */
+.player-photo-wrap {
+  position: absolute;
+  bottom: 10px; /* sobe a imagem 10px em relação ao fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 104px;
+  height: 104px; /* aumenta a altura pra mostrar mais ombros */
+  overflow: hidden;
+}
+
+
+.player-photo-wrap img {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  object-position: top; /* foca na parte superior da imagem */
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+
+/* LINK */
+.all-players-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================
+   HERO FEATURE – FIEL IMAGEM PROJECTO
+========================== */
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* imagem */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 75%;
+  
+  
+}
+
+/* gradiente */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.85) 0%,
+      rgba(0,0,0,.55) 35%,
+      rgba(0,0,0,.15) 60%,
+      rgba(0,0,0,0) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0,0,0,.6) 0%,
+      rgba(0,0,0,.25) 30%,
+      rgba(0,0,0,0) 55%
+    );
+}
+
+/* conteúdo */
+.hero-content{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* tag */
+.hero-tag{
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: .6rem;
+}
+
+/* título */
+.hero-title{
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  letter-spacing: .5px;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  max-width: 520px;
+}
+
+/* botão */
+.hero-btn{
+  display: inline-block;
+  width: fit-content;
+  background: var(--btn-bg);
+  color: var(
+  --btn-text);
+  font-size: 14px;
+  font-weight: 700;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+
+
+/* mobile */
+@media (max-width: 768px){
+  .hero{
+    height: 420px;
+  }
+
+  .hero-title{
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1024px){
+  .rioslag-carousel2 {
+    height: 550PX;
+    object-fit: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================
+   TICKETS – BOTÕES FIEIS
+============================ */
+
+.tickets{
+  padding:3rem 1rem;
+  background:#fff;
+  font-family:Inter, Arial, sans-serif;
+}
+
+.tickets-title{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:1.5rem;
+}
+
+/* wrapper */
+.tickets-wrapper{
+  position:relative;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+/* track */
+.tickets-track{
+  display:flex;
+  gap:1rem;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+
+.tickets-track::-webkit-scrollbar{
+  display:none;
+}
+
+/* card */
+.ticket-card{
+  position:relative;
+  min-width:320px;
+  height:200px;
+  overflow:hidden;
+  background:#000;
+}
+
+.ticket-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* overlay */
+.ticket-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.85) 0%,
+    rgba(0,0,0,.45) 45%,
+    rgba(0,0,0,0) 70%
+  );
+}
+
+/* badge */
+.ticket-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#e10600;
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+  padding:.35rem .6rem;
+  border-radius:4px;
+  z-index:2;
+}
+
+/* content */
+.ticket-content{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:1rem;
+  color:#fff;
+  z-index:2;
+}
+
+.ticket-content h3{
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:.4rem;
+}
+
+.ticket-date{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  font-size:13px;
+  font-weight:600;
+}
+
+.ticket-date img{
+  width:20px;
+}
+
+/* linha vermelha */
+.ticket-card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:4px;
+  background:#e10600;
+}
+
+/* ===== BOTÕES EXACTOS ===== */
+.tickets-arrow{
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:48px;
+  background:rgba(0,0,0,.55);
+  border:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:5;
+}
+
+.tickets-arrow span{
+  color:#fff;
+  font-size:28px;
+  font-weight:400;
+  line-height:1;
+}
+
+.tickets-arrow.left{
+  left:0;
+}
+
+.tickets-arrow.right{
+  right:0;
+}
+
+.tickets-arrow:hover{
+  background:rgba(0,0,0,.75);
+}
+
+/* mobile */
+@media (max-width:768px){
+  .ticket-card{
+    min-width:280px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   DUCATI LENOVO BANNER – FIEL
+================================ */
+
+.ducati-banner{
+  background:
+    linear-gradient(
+      100deg,
+      #1b1b1b 0%,
+      #2a2a2a 20%,
+      #7a0c0c 45%,
+      #b10000 55%,
+      #2a2a2a 70%,
+      #1b1b1b 100%
+    );
+  color:#fff;
+  padding:1.6rem 1.5rem;
+  font-family:Inter, Arial, sans-serif;
+}
+
+.ducati-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+}
+
+/* LEFT */
+.ducati-info h2{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:.3rem;
+  color: #fff;
+}
+
+.ducati-info p{
+  font-size:14px;
+  color:#e5e7eb;
+}
+
+/* RIGHT */
+.ducati-countdown{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+/* time blocks */
+.time-box{
+  position:relative;
+  background:rgba(255,255,255,.06);
+  padding:.7rem .9rem;
+  text-align:center;
+  min-width:64px;
+  clip-path: polygon(10% 0,100% 0,90% 100%,0 100%);
+}
+
+.time-box strong{
+  display:block;
+  font-size:20px;
+  font-weight:800;
+}
+
+.time-box span{
+  display:block;
+  font-size:11px;
+  letter-spacing:.5px;
+  opacity:.85;
+}
+
+/* button */
+.ducati-btn{
+  margin-left:.8rem;
+  background:#e10600;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  padding:.6rem 1.2rem;
+  border-radius:999px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:background .2s ease, transform .2s ease;
+}
+
+.ducati-btn:hover{
+  background:#c10500;
+  transform:translateY(-1px);
+}
+
+/* MOBILE */
+@media (max-width:900px){
+  .ducati-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .ducati-countdown{
+    width:100%;
+    justify-content:space-between;
+  }
+}
+
+
+@media (max-width: 768px){
+  .ducati-info,
+  .ducati-btn{
+    display: none;
+  }
+
+  .ducati-countdown{
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   RIOS – SYNC CALENDAR (COMPACT SCALE)
+   ===================================================== */
+
+.entrelag-calendar-sync {
+  width: 100%;
+  background: var(--surface);
+  padding: 44px 12px; /* ↓ reduz altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px #000e140d;
+}
+
+.entrelag-calendar-sync__inner {
+  max-width: 860px;
+  text-align: center;
+}
+
+/* TÍTULO */
+.entrelag-calendar-sync__title {
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 30px;          /* ↓ reduzido */
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+/* SUBTÍTULO */
+.entrelag-calendar-sync__subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;          /* ↓ reduzido */
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 720px;
+  margin: 0 auto 24px auto; /* ↓ menos espaço */
+}
+
+/* BOTÃO */
+.entrelag-calendar-sync__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 28px;       /* ↓ mais compacto */
+  border-radius: ;
+
+  background-color: #f4f5f6;
+  color: #000000;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;          /* ↓ */
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.entrelag-calendar-sync__cta:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+  .entrelag-calendar-sync {
+    padding: 32px 18px;
+  }
+
+  .entrelag-calendar-sync__title {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .entrelag-calendar-sync__subtitle {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   RIOS EVENT – OFFICIAL PROPORTION / PAGINA INICIAL START
+===================================================== */
+
+
+
+.round{
+  opacity:.5;
+  margin-right:6px;
+}
+
+.location{
+  font-size:14px;
+  letter-spacing:1px;
+  opacity:.7;
+}
+
+.track-map{
+  margin-top:auto;
+  width:220px;
+}
+
+.track-map img{
+  width:100%;
+  max-width:220px;
+  height:auto;
+  display:block;
+}
+
+/* DIREITA */
+
+
+.timezone{
+  font-size:12px;
+  opacity:.6;
+}
+
+.schedule-list{
+  list-style:none;
+  margin:18px 0 22px;
+  padding:0;
+  background:#262626;
+}
+
+.schedule-list li{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 14px;
+  background:rgba(255,255,255,.06);
+  margin-bottom:6px;
+  font-size:14px;
+  border-bottom:1px solid #33383e;
+}
+
+/* BOTÃO */
+.full-schedule-btn{
+  display:block;
+  margin-top:auto;
+  text-align:center;
+  background:#e10600;
+  color:#fff;
+  font-weight:800;
+  padding:14px;
+  border-radius:999px;
+  text-decoration:none;
+}
+
+/* MOBILE EVENT */
+@media (max-width:900px){
+  
+  .track-map{display:none;}
+}
+
+/* =====================================================
+  HERO
+===================================================== */
+
+
+
+
+/* CARD */
+.hero-card{
+  height:82px;
+  min-height:82px;
+  max-height:82px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  overflow:hidden;
+  border-radius:8px;
+  background:#fff;
+  color:#000;
+}
+
+.hero-card.dark{
+  background:#111;
+  color:#fff;
+}
+
+.hero-card img{
+  height:100%;
+  width:auto;
+  object-fit:cover;
+  border-top-left-radius:8px;
+  border-bottom-left-radius:8px;
+  flex-shrink:0;
+}
+
+.hero-card-content{
+  padding:10px 12px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.hero-card p{
+  margin:0;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.15;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.hero-card small{
+  font-size:12px;
+  opacity:.65;
+  margin-top:4px;
+}
+
+.time{
+  display:inline-block;
+  margin-bottom:6px;
+  font-size:12px;
+  font-weight:600;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  padding:2px 6px;
+  border-radius:4px;
+}
+
+/* MOBILE HERO */
+@media (max-width:900px){
+  
+
+  
+  .hero-card{scroll-snap-align:start;}
+}
+
+
+
+@media (max-width:360px){
+  .hero-card{flex:0 0 calc(100% - 32px);}
+}
+
+@media (min-width:361px) and (max-width:480px){
+  .hero-card{flex:0 0 calc(100% - 40px);}
+}
+
+@media (min-width:481px) and (max-width:900px){
+  .hero-card{flex:0 0 calc(100% - 64px);}
+}
+
+
+
+/* =====================================================
+   EVENT – OFFICIAL PROPORTION / PAGINA INICIAL END
+===================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   RESET / BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* =========================
+   LAYOUT GERAL
+========================= */
+.f1-wrapper {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.f1-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 28px;
+}
+
+/* =========================
+   HERO PRINCIPAL
+========================= */
+.f1-hero {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 520px;
+  background: #000;
+}
+
+
+
+.f1-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.f1-card-link{
+  text-decoration: none;
+}
+
+
+.f1-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      130% 95% at 50% 38%,
+      rgba(255, 255, 255, 0.20) 0%,
+      rgba(255, 255, 255, 0.10) 20%,
+      rgba(0, 0, 0, 0.35) 42%,
+      rgba(0, 0, 0, 0.75) 68%,
+      rgba(0, 0, 0, 0.92) 85%,
+      #000 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+}
+
+
+@media (max-width: 600px) {
+  .f1-hero::after {
+    background:
+      radial-gradient(
+        150% 100% at 50% 42%,
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(0, 0, 0, 0.40) 48%,
+        rgba(0, 0, 0, 0.92) 80%,
+        #000 100%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0.95) 100%
+      );
+  }
+}
+
+
+.f1-hero img {
+  filter: contrast(1.05) saturate(0.95);
+
+  object-position: center 45%;
+}
+
+
+
+
+
+
+.f1-hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px;
+}
+
+.f1-tag {
+  display: inline-block;
+  background: #e10600;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 3px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.f1-hero h1 {
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #fff;
+  max-width: 90%;
+}
+
+/* =========================
+   SIDEBAR NOTÍCIAS
+========================= */
+.f1-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.f1-card {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05);
+}
+
+.f1-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.f1-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.f1-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+.label-unlocked {
+  background: var(--bg3);
+  color: #fff;
+}
+
+.label-academy {
+  background: #ff4fa3;
+  color: var(--text-topbar);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 1024px) {
+  .f1-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .f1-hero {
+    min-height: 440px;
+  }
+
+  .f1-hero h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .f1-hero h1 {
+    font-size: 24px;
+  }
+
+  .f1-hero-content {
+    padding: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#standings-track {
+  position: relative;
+
+  /* mantém scroll */
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* suaviza scroll (extra UX) */
+  scroll-behavior: smooth;
+
+  /* FADE LATERAL (corrigido) */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+.carousel-track {
+  position: relative;
+
+  /* mantém o scroll */
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  /* FADE LATERAL (robusto) */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 40px,
+    black calc(100% - 40px),
+    transparent 100%
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.match-card {
+  cursor: pointer; /* 👆 dedo indicador */
+}
+
+.matches-track {
+  cursor: grab; /* mão aberta */
+}
+
+.matches-track.dragging {
+  cursor: grabbing; /* mão fechada */
+}
+
+.matches-track.dragging,
+.matches-track.dragging .match-card {
+  cursor: grabbing !important;
+}
+
+.match-card {
+  transition: transform 0.2s ease;
+}
+
+.match-card:active {
+  transform: scale(0.97); /* leve “pressionado” */
+}
+
+
+
+.matches-track {
+
+  /* FADE LATERAL (versão light) */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+
+
+
+
+
+.all-players-link {
+  color: #007bff;          /* cor do link */
+  text-decoration: none;    /* sem sublinhado */
+  font-weight: 600;
+  cursor: pointer;          /* muda cursor para mãozinha */
+  transition: color 0.3s;
+}
+
+.all-players-link:hover {
+  color: #0056b3;          /* cor ao passar o mouse */
+  text-decoration: underline; /* opcional */
+}

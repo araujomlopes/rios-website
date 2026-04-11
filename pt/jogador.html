@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Página Jogador</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+      <!-- nova fonte araujo test -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- nova fonte -->
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/jogador.css">
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <main id="main">
+
+    <section class="header-banner">
+      <div class="player-header-container">
+        <div class="club-header-background">
+          <picture class="bg-texture-container">
+            <source media="(min-width:1920px)" data-srcset="">
+            <source media="(min-width:1200px)" data-srcset="">
+            <source media="(min-width:800px)"  data-srcset="">
+            <img class="bg-texture" 
+                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
+                 data-src="" 
+                 alt="Banner do jogador">
+          </picture>
+        </div>
+
+        <div class="player-content">
+          <div class="player-info">
+            <div class="player-number">1</div>
+            <div class="player-name">
+              <span class="firstName">NOME</span>
+              <span class="lastName">APELIDO</span>
+            </div>
+
+            <div class="club-info">
+              <img class="club-logo" 
+                   src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
+                   data-src="" 
+                   alt="Club Logo">
+              <div class="club-text">
+                <div class="player-position">POSIÇÃO</div>
+                <div class="player-club">EQUIPA</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-photo">
+            <img class="player-photo-img" 
+                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
+                 data-src="" 
+                 alt="Player">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY STATS DO JOGADOR -->
+    <div class="topscore-container container-largura">
+      <section class="key-stats-card">
+        <div class="ks-left">
+          <div class="ks-title">Estatísticas</div>
+          <div class="donut-and-bars">
+            <div class="donut-new">
+              <svg viewBox="0 0 36 36" class="donut-svg-new" aria-hidden="true">
+                <circle cx="18" cy="18" r="15.5" fill="none" stroke="#e5e7eb" stroke-width="3"></circle>
+                <circle cx="18" cy="18" r="15.5" fill="none" stroke="#00D600" stroke-width="3"
+                        stroke-dasharray="330 330" stroke-dashoffset="20" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                <circle cx="18" cy="18" r="15.5" fill="none" stroke="#1E40FF" stroke-width="3"
+                        stroke-dasharray="30 330" stroke-dashoffset="-310" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+              </svg>
+
+              <div class="donut-center-new">
+                <div class="donut-number-new">0</div>
+                <div class="donut-label-new">Jogos</div>
+              </div>
+            </div>
+
+            <div class="bars-list">
+              <div class="bar-row">
+                <span class="bar-label">Victórias</span><span class="bar-value">0</span>
+                <div class="bar-track"><div class="bar-fill wins"></div></div>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Empates</span><span class="bar-value">0</span>
+                <div class="bar-track"><div class="bar-fill draws"></div></div>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Derrotas</span><span class="bar-value">0</span>
+                <div class="bar-track"><div class="bar-fill defeats"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ks-right">
+          <div class="stats-grid">
+            <div class="stat-item"><div class="stat-number" id="height">0</div><div class="stat-label">Altura</div></div>
+            <div class="stat-item"><div class="stat-number" id="preferredFoot">0</div><div class="stat-label">Pé preferido</div></div>
+            <div class="stat-item"><div class="stat-number" id="goals">0</div><div class="stat-label">Golos</div></div>
+            <div class="stat-item"><div class="stat-number" id="yellowCards">0</div><div class="stat-label">Cartão amarelo</div></div>
+            <div class="stat-item"><div class="stat-number" id="redCards">0</div><div class="stat-label">Cartão vermelho</div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SLIDER DE JOGOS -->
+    <div class="tabelapontos-container container-largura">
+      <section class="mu-slider-wrapper">
+        <div class="mu-slider-head">
+          <h2 class="mu-slider-title">
+            <span class="jogos">Jogos</span>
+            <a href="#" class="mu-slider-link">Ver todos Jogos</a>
+          </h2>
+        </div>
+
+        <div class="mu-slider">
+          <button class="mu-slider-btn prev" aria-label="Previous">‹</button>
+          <div class="mu-slider-track"></div>
+          <button class="mu-slider-btn next" aria-label="Next">›</button>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="assets/js/pages/jogador.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+</body>
+</html>

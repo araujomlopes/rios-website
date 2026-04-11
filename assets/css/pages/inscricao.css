@@ -1,0 +1,289 @@
+/* Container e card */
+.containerinscricao { 
+  display:flex; 
+  justify-content:center; 
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+
+
+.join-card {
+  width:520px;
+  max-width:92%;
+  background: var(--surface);
+  padding:36px 32px;
+  font-family:Inter,system-ui;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  border-radius:8px;
+}
+
+/* Títulos e subtítulos */
+h1 { text-align:center; font-size:22px; margin:0 0 8px; }
+.subtitle { text-align:center; font-size:14px; color:var(--text-topbar); margin-bottom:20px; }
+.required { text-align:right; font-size:11px; color:var(--text-topbar); margin-bottom:8px; }
+
+/* Campos */
+.field { margin-bottom:18px; position:relative; }
+.input {
+  color: var(--text);
+  width:100%;
+  height:46px;
+  padding:14px 12px 0;
+  border:1px solid #777;
+  font-size:16px;
+  background:var(--surface);
+  transition:border-color .2s;
+}
+.input:invalid:not(:placeholder-shown) { border-color:#e00000; color: var(--text);}
+.floating label {
+  position:absolute; left:12px; top:50%; transform:translateY(-50%);
+  font-size:16px; color:#777; background:var(--surface); padding:0 6px;
+  pointer-events:none; transition:.2s ease;
+}
+.floating input:focus + label,
+.floating input:not(:placeholder-shown) + label,
+.floating select:focus + label,
+.floating select:not([value=""]) + label {
+  top:0; font-size:11px; color:#e00000;
+}
+.icon-wrap { position:relative; }
+.icon { position:absolute; right:10px; top:50%; transform:translateY(-50%); font-size:14px; color:#777; pointer-events:none; }
+
+/* Checkboxes */
+.checkbox { display:flex; gap:10px; font-size:14px; color:var(--text-topbar); margin:16px 0; }
+.checkbox a { color:var(--text); text-decoration:none; font-weight: 700; }
+
+/* Botão */
+.btn {
+  width:100%; height:42px;
+  border:none;
+  background:var(--accent);
+  color:#fff; font-weight:600;
+  border-radius:4px; cursor:pointer;
+}
+
+/* Divisor */
+.divider { display:flex; align-items:center; gap:10px; margin:20px 0; font-size:12.8px; color:var(--text-topbar); }
+.divider::before, .divider::after { content:""; flex:1; height:1px; background:var(--line); }
+
+/* Footer */
+.footer { text-align:center; font-size:16px; color: var(--text-topbar); }
+.footer a { color:var(--text); text-decoration:none; font-weight: 700; }
+
+/* Nota */
+.note { margin-top:20px; font-size:12.8px; color:var(--text-topbar); text-align:center; }
+
+/* Mensagens de erro */
+.error { color:red; font-size:11px; margin-top:2px; }
+
+
+
+
+
+
+
+
+.success-overlay {
+  position: fixed;       /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  z-index: 9999;         /* fica acima de tudo */
+}
+
+.success-overlay .join-card {
+  width: 500px;
+  max-width: 90%;
+  background: #fff;
+  padding: 36px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MODAL DE VERIFICAÇÃO DE EMAIL inicio */
+.verify-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.verify-card {
+  background: #fff;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.verify-card h2 {
+  margin-bottom: 10px;
+}
+
+.verify-card button {
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+/* MODAL DE VERIFICAÇÃO DE EMAIL fim */
+
+
+
+
+
+
+.titulo-azul{
+  color: var(--text);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE FULLSCREEN (até 768px) */
+@media (max-width: 768px) {
+
+  /* Remove espaços do container */
+  .containerinscricao {
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  /* Card ocupa a tela toda */
+  .join-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 24px 32px;   /* padding interno apenas para leitura */
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* Overlay de sucesso também fullscreen */
+  .success-overlay {
+    padding: 0;
+  }
+
+  .success-overlay .join-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* Modal de verificação ocupa toda a tela */
+  .verify-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+
+    border-radius: 0;
+    padding: 24px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Remove fundo automático do Chrome/Edge */
+/* AUTOFILL RESET (Chromium + Safari) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--surface) inset !important;
+  box-shadow: 0 0 0 1000px var(--surface) inset !important;
+  -webkit-text-fill-color: inherit !important;
+  caret-color: inherit;
+  border: 1px solid #777 !important;
+}
+
+
+
+
+
+
+
+/* Corrige apenas inputs com floating label no Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .field.floating input {
+    -webkit-text-fill-color: var(--text) !important; /* cor do texto real */
+    caret-color: var(--text);                        /* cor do cursor */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Ajuste vertical do checkbox */
+.checkbox {
+  display: flex;
+  align-items: center; /* centraliza verticalmente checkbox e texto */
+  gap: 10px;
+  font-size: 14px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  cursor: pointer;
+  /* remove pequenos deslocamentos */
+  vertical-align: middle;
+  margin: 0; 
+}

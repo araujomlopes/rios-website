@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campeonato do Mundo — NACIONAL</title>
+
+   
+  <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    .verification-wrapper {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .verification-card {
+      max-width: 520px;
+      width: 100%;
+      background: #ffffff;
+      padding: 50px 40px;
+      
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .verification-card h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #001188;
+    }
+
+    .verification-card p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .verification-email {
+      font-weight: 600;
+      color:#0027ff;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .verification-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 22px;
+      color:#0027ff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .verification-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main class="verification-wrapper">
+  <div class="verification-card">
+
+    <h1>Verificação necessária</h1>
+
+    <p>Enviámos um email de verificação para:</p>
+
+    <div id="emailDisplay" class="verification-email">
+      exemplo@email.com
+    </div>
+
+    <p>
+      Para concluir a sua inscrição no torneio,
+      confirme o seu endereço de email.
+      Caso não encontre, verifique a pasta de spam.
+    </p>
+
+    <a href="index.html" class="verification-btn">Voltar ao site</a>
+
+  </div>
+</main>
+
+<div id="footer"></div>
+
+<script src="assets/js/main.js"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+
+  if(email){
+    document.getElementById("emailDisplay").textContent = email;
+  }
+</script>
+
+</body>
+</html>

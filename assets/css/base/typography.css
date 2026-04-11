@@ -1,0 +1,174 @@
+/* =====================
+   TYPOGRAPHY SYSTEM
+   ===================== */
+
+
+/* ---------------------
+   BODY / PARÁGRAFO
+--------------------- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--space-3);
+}
+
+small,
+.disclaimer {
+  font-size: var(--fs-xs);
+  line-height: var(--lh-normal);
+  color: var(--color-text-secondary);
+}
+
+
+/* ---------------------
+   HEADINGS
+--------------------- */
+h1 {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+h2 {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+  color: var(--text);
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+h4, h5, h6 {
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-medium);
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+
+/* ---------------------
+   DISPLAY TITLES (Impact)
+--------------------- */
+.display-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  line-height: 1;
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.display-number {
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  line-height: 1;
+  letter-spacing: var(--ls-strong);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+
+/* ---------------------
+   TABLE / SCORE NUMBERS
+--------------------- */
+.table-number {
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-score);
+  color: var(--color-text-primary);
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+/* ---------------------
+   STAT / NUMBERS EM DESTAQUE
+--------------------- */
+.stat,
+.number {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-text-primary);
+}
+
+
+/* ---------------------
+   BUTTONS / CTA
+--------------------- */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-secondary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-brand);
+  background-color: var(--color-ui-01);
+  padding: var(--space-1) var(--space-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.85;
+  outline: none;
+}
+
+.button:active {
+  opacity: 0.75;
+}
+
+
+/* ---------------------
+   DISCLAIMER / INFO TEXT
+--------------------- */
+.teams-disclaimer {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding: 0;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}

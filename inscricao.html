@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Meta tags obrigatórias -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Website Leve e Responsivo</title>
+
+    
+
+  <link rel="stylesheet" href="assets/css/firefox-fixes.css">
+
+  <!-- Google Fonts – pré-conexão -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+
+  
+
+
+    <!-- CSS global/base -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <link rel="stylesheet" href="assets/css/pages/jogadoresdoresinscritos.css">
+  <link rel="stylesheet" href="assets/css/pages/inscricao.css">
+  
+
+
+    
+ 
+
+  <!-- (Opcional) JS no head apenas se necessário; scripts principais no final do body) -->
+</head>
+
+
+<body>
+   <!-- ========== HEADER ========== -->
+  <div id="header"></div>
+   <!-- ========== HEADER ========== -->
+
+
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+  <section class="containerinscricao">
+    <div class="join-card">
+      <h1 class="titulo-azul">Ficha de inscrição</h1>
+      <p class="subtitle">Termo de compromisso e responsabilidade.</p>
+      <div class="required">*Campo obrigatório</div>
+
+      <!-- CAMPOS DO FORMULÁRIO -->
+      <!-- CAMPOS DO FORMULÁRIO -->
+<div class="field floating">
+  <input id="nome" type="text" class="input" required placeholder=" " />
+  <label>Nome*</label>
+</div>
+
+<div class="field floating">
+  <input id="apelido" type="text" class="input" required placeholder=" " />
+  <label>Apelido*</label>
+</div>
+
+<div class="field floating">
+  <input id="endereco" type="text" class="input" required placeholder=" " />
+  <label>Endereço*</label>
+</div>
+
+<div class="field floating">
+  <input id="email" type="email" class="input" required placeholder=" " />
+  <label>Email*</label>
+</div>
+
+<div class="field floating">
+  <input id="bi" type="text" class="input" required placeholder=" " />
+  <label>Código*</label>
+</div>
+
+<div class="field floating">
+  <input id="telefone" type="tel" class="input" required placeholder=" " />
+  <label>Telefone*</label>
+</div>
+
+<div class="field floating">
+  <input id="altura" type="text" class="input" required placeholder=" " />
+  <label>Altura*</label>
+</div>
+
+<div class="field floating">
+  <select id="pe" class="input" required>
+    <option value="" disabled selected></option>
+    <option>Direito</option>
+    <option>Esquerdo</option>
+  </select>
+  <label>Pé preferido*</label>
+</div>
+
+<div class="field floating">
+  <select id="posicao" class="input" required>
+    <option value="" disabled selected></option>
+    <option>Guarda-redes</option>
+    <option>Fixo</option>
+    <option>Ala</option>
+    <option>Pivô</option>
+  </select>
+  <label>Posição*</label>
+</div>
+
+<div class="field floating">
+  <select id="clube" class="input" required>
+    <option value="" disabled selected></option>
+    <option>Equipa 1</option>
+    <option>Equipa 2</option>
+    <option>Equipa 3</option>
+    <option>Equipa 4</option>
+    <option>Equipa 5</option>
+    <option>Equipa 6</option>
+  </select>
+  <label>Clube*</label>
+</div>
+
+<div class="field floating">
+  <input id="numeroCamisa" type="text" class="input" required placeholder=" " />
+  <label>Número da camisa*</label>
+</div>
+
+      <!-- CHECKBOXES -->
+      <label class="checkbox"><input type="checkbox" required><span>Declaro que li e aceito o <a href="regulamento.html">Regulamento do Torneio</a>.</span></label>
+      <label class="checkbox"><input type="checkbox" required><span>Declaro que li e aceito os <a href="termos_condicoes.html">Termos & Condições</a> tal como as <a href="politicas_privacidade.html">Políticas de Privacidade</a>.</span></label>
+      <label class="checkbox"><input type="checkbox" required><span>Autorizo a utilização da minha imagem para fins de divulgação do torneio.</span></label>
+
+      <button id="btnInscrever" class="btn">Inscrever-se</button>
+      <div id="messageDiv"></div>
+
+      <div class="divider"><span>Alguma dificuldade?</span></div>
+      <div class="footer">Entre em contacto com a <a href="#">Comissão</a></div>
+      <div class="note">*Menores de 18 anos devem contactar a Comissão para validação da inscrição</div>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL DE VERIFICAÇÃO DE EMAIL inicio-->
+<div id="verifyModal" class="verify-modal">
+  <div class="verify-card">
+    <h2>Verify Email</h2>
+    <p>
+      Please click the verification link that has been sent to
+      <strong id="userEmail"></strong> to verify your email address
+    </p>
+
+    <button id="resendEmail">Resend email</button>
+    <button id="checkVerification">Check verification</button>
+  </div>
+</div>
+<!-- MODAL DE VERIFICAÇÃO DE EMAIL fim-->
+
+
+  
+    <!-- FOOTER (injetado via JS start) -->
+    <div id="footer"></div>
+    <!-- FOOTER (injetado via JS end) -->
+
+  <!-- ========== SCRIPTS ========== -->
+  <!-- JS global / base -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/header-nav.js"></script>
+
+<!-- JS específico de páginas -->
+<script src="assets/js/pages/jogadoresdoresinscritos.js"></script>
+<script src="assets/js/pages/inscricao.js"></script>
+
+
+<script src="assets/js/pages/theme.js"></script>
+</body>
+</html>

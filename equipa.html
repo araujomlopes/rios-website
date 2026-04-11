@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Website Leve e Responsivo</title>
+
+  
+
+  <!-- Google Fonts (RIOS-style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
+    rel="stylesheet" >
+
+    <!-- nova fonte araujo test -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- nova fonte -->
+  
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- CSS de página / componentes -->
+  <link rel="stylesheet" href="assets/css/pages/equipa.css">
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <div id="header"></div>
+  <!-- ========== HEADER ========== -->
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+    <!-- ========== BACKGROUND BANNER ========== -->
+    <section class="header-banner">
+      <div class="player-header-container">
+        <div class="player-content">
+          <div class="team-info">
+            <div class="team-title">NOME DA EQUIPA</div>
+            <div class="team-sponsor">Nome do sponsor</div>
+          </div>
+        </div>
+
+        <div class="club-header-background">
+          <picture id="team-banner-picture">
+            <source media="(min-width: 1440px)" srcset="assets/images/banner/TEAM_NAME/banner-3840.webp">
+            <source media="(min-width: 768px)" srcset="assets/images/banner/TEAM_NAME/banner-2560.webp">
+            <img src="" alt="Banner da Equipa">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDER DE JOGOS -->
+    <div class="tabelapontos-container">
+      <section class="mu-slider-wrapper">
+        <div class="mu-slider-head">
+          <h2 class="mu-slider-title">
+            <span class="jogos">Jogos</span>
+            <a href="#" class="mu-slider-link">Ver todos Jogos</a>
+          </h2>
+        </div>
+
+        <div class="mu-slider">
+          <button class="mu-slider-btn prev" aria-label="Previous">‹</button>
+          <div class="mu-slider-track">
+            <!-- MATCH CARDS (carregadas dinamicamente via equipa.js) -->
+          </div>
+          <button class="mu-slider-btn next" aria-label="Next">›</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- KEY STATS -->
+    <div class="topscore-container">
+              <div class="ks-left">
+          <div class="ks-title">Estatísticas</div>
+          
+        </div>
+      <section class="key-stats-card">
+
+
+        <div class="ks-right">
+          <div class="stats-grid">
+  <div class="stat-item">
+    <div class="stat-label">Jogos</div>
+    <div id="stat-games" class="stat-number">0</div>  <!-- ✅ corrigido -->
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Golos</div>
+    <div id="stat-goals-for" class="stat-number">0</div>  <!-- ✅ corrigido -->
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Golos sofridos</div>
+    <div id="stat-goals-against" class="stat-number">0</div>  <!-- ✅ corrigido -->
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Cartões Amarelos</div>
+    <div id="stat-yellows" class="stat-number">0</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Cartões Vermelhos</div>
+    <div id="stat-reds" class="stat-number">0</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Vitórias</div>
+    <div id="stat-wins" class="stat-number">0</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Empates</div>
+    <div id="stat-draws" class="stat-number">0</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Derrotas</div>
+    <div id="stat-defeats" class="stat-number">0</div>
+  </div>
+</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SQUAD -->
+    <div class="topscore-container">
+      <div class="squad-card">
+  <div class="squad-header">
+    <h2>Squad</h2>
+    <div>
+      <button class="squad-nav-btn prev">&#8249;</button>
+      <button class="squad-nav-btn next">&#8250;</button>
+    </div>
+  </div>
+  <div class="squad-carousel">
+    <!-- jogadores inseridos pelo JS -->
+  </div>
+</div>
+    </div>
+  </main>
+
+  <!-- FOOTER (injetado via JS start) -->
+  <div id="footer"></div>
+  <!-- FOOTER (injetado via JS end) -->
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="assets/js/pages/slider.js"></script>
+  <script src="assets/js/pages/squad.js"></script>
+  <script src="assets/js/pages/equipa.js"></script>
+  
+
+  <!-- Scripts gerais -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+
+  
+  
+
+  <script src="assets/js/pages/theme.js"></script>
+</body>
+</html>

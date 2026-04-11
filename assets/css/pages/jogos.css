@@ -1,0 +1,345 @@
+/* ===============================
+   CSS DA PÁGINA JOGOS
+   Arquivo: assets/css/pages/jogos.css
+   Layout estável (RIOS-style)
+=============================== */
+
+
+
+/* ===============================
+   TÍTULO
+=============================== */
+h2.section-title{
+  font-size:24px;
+  font-weight:700;
+  color:var(--text);
+  margin:20px 12px 16px;
+}
+
+/* ===============================
+   WRAPPER
+=============================== */
+.matches-wrap{
+  display:grid;
+  gap:16px;
+  width:100%;
+  max-width:1200px;
+  overflow:hidden;
+}
+
+/* ===============================
+   MATCH CARD
+=============================== */
+.match-card{
+  background:var(--surface);
+  
+  border-radius:;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===============================
+   HEADER DO CARD
+=============================== */
+.match-card__header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-bottom:1px solid var(--line);
+}
+
+.comp-badge{
+  width:28px;
+  height:28px;
+  flex-shrink:0;
+}
+
+.comp-info .comp-name{
+  font-size:14px;
+  font-weight:600;
+  color: var(--text-topbar);
+}
+
+.comp-info .comp-sub{
+  font-size:13px;
+  color: var(--text-topbar);
+}
+
+/* ===============================
+   CORPO DO JOGO (🔥 FIX FIREFOX)
+=============================== */
+.match-card__body{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;
+  padding:14px 12px;
+  gap:8px;
+}
+
+/* ===============================
+   HOME / AWAY
+=============================== */
+.home-block,
+.away-block{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:0; /* 🔥 CRÍTICO PARA FIREFOX */
+}
+
+.home-block{ justify-content:flex-start; }
+.away-block{ justify-content:flex-end; }
+
+/* ===============================
+   LOGOS
+=============================== */
+.team-logo{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+/* ===============================
+   NOME DA EQUIPA (NUNCA QUEBRA)
+=============================== */
+.team-name{
+  max-width:120px;
+  min-width:0;
+  font-size:16px;
+  font-weight:600;
+  color:var(--text);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* ===============================
+   BLOCO CENTRAL
+=============================== */
+.match-meta{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-width:90px;
+  flex-shrink:0;
+}
+
+.match-time{
+  font-size:16px;
+  font-weight:600;
+  color:var(--text);
+  padding:4px 10px;
+  border-radius:4px;
+  white-space:nowrap;
+}
+
+/* ===============================
+   BOTÕES
+=============================== */
+.match-actions{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.btn{
+  font-size:16px;
+  font-weight:600;
+  color:var(--accent);
+  background:none;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+/* ===============================
+   SHOW MORE
+=============================== */
+.show-more-btn{
+  font-size:16px;
+  font-weight:600;
+  color:var(--accent);
+  background:none;
+  border:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  margin:12px 0;
+}
+
+.show-more-btn svg{
+  transition:transform .3s ease;
+}
+
+.show-more-btn.active svg{
+  transform:rotate(180deg);
+}
+
+/* ===============================
+   FILTROS (BLIGA STYLE)
+=============================== */
+.bl-filters-container{
+  display:flex;
+  gap:60px;
+  align-items:flex-start;
+  padding:0 10px 25px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.bl-select-wrapper{
+  position:relative;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.bl-select-label{
+  font-size:12px;
+  font-weight:500;
+  color:var(--text-topbar);
+  margin-bottom:4px;
+}
+
+.bl-select{
+  width:100%;
+  padding:4px 0;
+  border:none;
+  background:transparent;
+  font-size:17px;
+  font-weight:600;
+  color:var(--text-topbar);
+  appearance:none;
+  outline:none;
+  cursor:pointer;
+}
+
+.bl-select-wrapper::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:32px;
+  width:10px;
+  height:10px;
+  border-right:2px solid #6b7280;
+  border-bottom:2px solid #6b7280;
+  transform:translateY(-50%) rotate(45deg);
+  pointer-events:none;
+}
+
+.bl-select-underline{
+  width:100%;
+  height:1px;
+  background:var(--line);
+  margin-top:3px;
+}
+
+/* ===============================
+   MOBILE
+=============================== */
+@media (max-width:768px){
+
+  .bl-filters-container{
+    flex-wrap:wrap;
+    gap:16px 20px;
+  }
+
+  .match-card__body{
+    padding:12px 12px;
+    gap:6px;
+  }
+
+  .team-logo{
+    width:32px;
+    height:32px;
+  }
+
+  .team-name{
+    font-size:14px;
+    max-width:100px;
+  }
+
+  .match-time{
+    font-size:14px;
+    padding:3px 8px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL
+=============================== */
+@media (max-width:600px){
+  .team-name{
+    max-width:90px;
+  }
+}
+
+/* ===============================
+   CONTAINERS
+=============================== */
+.page-header_title,
+.topscore-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:50px 10px 35px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+.team-name-link,
+.team-logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+/* Fix alinhamento dos logos com links */
+.match-meta .team-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.match-meta .team-logo-link img {
+  display: block;
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+#teammates-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+
+  /* 🔥 ESSENCIAL PARA MOBILE */
+  touch-action: pan-y;
+
+  /* suavidade iOS */
+  -webkit-overflow-scrolling: touch;
+
+  /* evita seleção de texto ao arrastar */
+  user-select: none;
+}

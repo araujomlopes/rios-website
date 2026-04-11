@@ -1,0 +1,474 @@
+/* =========================================================
+   EQUIPAS — SQUAD (BLOCO PRINCIPAL)
+   ========================================================= */
+.squad-card {
+  /* background:var(--color-secondary); */
+  padding:32px;
+  border-radius:22px;
+  /* box-shadow:0 4px 12px rgba(0,0,0,0.05); */
+  /* border:1px solid #e5e7eb; */
+}
+
+.squad-header { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  margin-bottom:28px; 
+}
+
+.squad-header h2 { 
+  font-size:28px; 
+  color:#1e293b; 
+  font-weight:600; 
+  margin:0; 
+}
+
+/* Botões de navegação do carrossel */
+.squad-nav-btn { 
+  width:40px; 
+  height:40px; 
+  border-radius:50%; 
+  border:1px solid #cbd5e1; 
+  color:#0284c7; 
+  background:#fff; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  cursor:pointer; 
+  font-size:20px; 
+}
+
+/* Carrossel de jogadores */
+.squad-carousel { 
+  display:flex; 
+  gap:32px; 
+  overflow-x:auto; 
+  padding:20px 0; 
+}
+
+/* Jogador individual */
+.squad-player { 
+  width:120px; 
+  flex-shrink:0; 
+  text-align:center; 
+}
+
+/* Foto do jogador */
+.squad-player-img { 
+  width:100px; 
+  height:100px; 
+  margin:auto; 
+  border-radius:50%; 
+  overflow:hidden; 
+  border:1px solid #e2e8f0; 
+  box-shadow:0 2px 6px rgba(0,0,0,0.06); 
+}
+
+.squad-player-img img { 
+  width:100%; 
+  height:100%; 
+  object-fit:cover; 
+}
+
+/* Nome e posição */
+.squad-player-name { 
+  margin-top:12px; 
+  font-size:15px; 
+  font-weight:600; 
+  color:#334155; 
+  text-decoration: none;
+}
+
+.squad-player-role { 
+  font-size:12px; 
+  color:#94a3b8; 
+}
+
+/* =========================================================
+   TABELA DE PONTOS / SLIDER
+   ========================================================= */
+.tabelapontos-container {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 10px;
+  padding-top:60px;
+}
+
+/* =========================================================
+   KEY STATS — CONTAINER BASE
+   ========================================================= */
+.topscore-container {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 10px 40px 10px;
+}
+
+/* =========================================================
+   BARRAS DE ESTATÍSTICAS (VALORES DINÂMICOS)
+   ========================================================= */
+.bar-fill.wins { width:0%; }
+.bar-fill.draws { width:0%; }
+.bar-fill.defeats { width:0%; }
+
+/* =========================================================
+   BOTÕES DE NAVEGAÇÃO DO SQUAD
+   ========================================================= */
+.squad-header > div {
+  display:flex;
+  gap:12px;
+}
+
+/* =========================================================
+   BANNER DA EQUIPA
+   ========================================================= */
+.club-header-background img {
+  object-fit:cover;
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+}
+
+/* =========================================================
+   AJUSTE DE TEXTO NO RODAPÉ
+   ========================================================= */
+.rio-brand .muted {
+  font-size:0.9rem;
+  margin-top:0.2rem;
+}
+
+/* =========================================================
+   SLIDER DE JOGOS DA EQUIPA — INÍCIO
+   ========================================================= */
+.mu-slider-wrapper {
+  /* background:#fff; */
+  /* border-radius:8px; */
+  /* border:1px solid #dbdde9; */
+  padding:40px 0;
+  margin-bottom:40px;
+}
+
+.jogos {
+  font-size:24px;
+  font-weight:700;
+  color:var(--text);
+  margin:20px 0 16px;
+}
+
+/* Cabeçalho do slider */
+.mu-slider-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:16px;
+  padding-inline:24px;
+}
+
+.mu-slider-title {
+  font-family: ;
+  font-size:28px;
+  color:#111;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+
+.mu-slider-link {
+  color:var(--text-topbar);
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  border-style:none;
+  cursor:pointer;
+}
+
+/* Área do slider */
+.mu-slider {
+  position:relative;
+  overflow:hidden;
+  padding-inline:24px;
+}
+
+.mu-slider-track {
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  cursor:grab;
+  padding:8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Aplica apenas para o slider de jogos */
+.mu-slider-track, .squad-carousel {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+.mu-slider-track::-webkit-scrollbar { display:none; }
+
+/* Card de jogo */
+.mu-card {
+  background:var(--surface);
+ 
+  border-radius:8px;
+  box-shadow:0 4px 8px rgba(0,0,0,.08);
+  padding:20px;
+  flex:0 0 267px;
+  /* height:300px; */
+  text-align:center;
+  user-select:none;
+}
+
+.mu-card img { pointer-events:none; }
+
+.mu-card .league { width:150px; margin-bottom:10px; }
+.mu-card .info { font-size:14px; color:var(--text-topbar); margin-bottom:15px; line-height:1.4; }
+.mu-card .score { display:flex; align-items:center; justify-content:center; gap:12px; font-weight:700; font-size:18px; margin:10px 0; }
+.mu-card .score img { width:42px; height:42px; }
+.mu-card .teams { display:flex; justify-content:center; gap:8px; font-weight:600; margin:10px 0; font-size:14px; }
+.mu-card .cta { color:#c70101; font-weight:700; text-transform:uppercase; font-size:13px; text-decoration:none; }
+
+/* Botões do slider */
+.mu-slider-btn {
+  background:#fff;
+  border:1px solid #ccc;
+  border-radius:2px;
+  width:36px;
+  height:36px;
+  font-size:22px;
+  color:#000;
+  cursor:pointer;
+  position:absolute;
+  top:45%;
+  transform:translateY(-50%);
+  transition:all .2s ease;
+}
+
+.mu-slider-btn:hover {
+  background:#c70101;
+  color:#fff;
+}
+
+.mu-slider-btn.prev { left:0; }
+.mu-slider-btn.next { right:0; }
+
+/* Responsivo slider */
+@media (max-width:1024px){
+  .mu-card{ flex:0 0 48%; }
+}
+
+@media (max-width:600px){
+  .mu-card{ flex:0 0 85%; }
+  .mu-slider-btn{ display:none; }
+}
+
+
+
+/* =========================================================
+   SLIDER DE JOGOS DA EQUIPA — FIM
+   ========================================================= */
+
+
+/* =========================================================
+   SQUAD EQUIPA — BLOCO DUPLICADO (MANTIDO INTACTO)
+   ========================================================= */
+.squad-card {/* background:#fff; *//* padding:32px; *//* border-radius:22px; *//* box-shadow:0 4px 12px rgba(0,0,0,0.05); *//* border:1px solid #e5e7eb; */}
+.squad-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;}
+.squad-header h2 { font-size:28px; color:var(--text); font-weight:600; margin:0;}
+.squad-nav-btn { width:40px; height:40px; border-radius:2px; border:1px solid #cbd5e1; color:#0284c7; background:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:20px;}
+
+.squad-player { width:120px; flex-shrink:0; text-align:center;}
+.squad-player-img { width:100px; height:100px; margin:auto; border-radius:50%; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 2px 6px rgba(0,0,0,0.06);}
+.squad-player-img img { width:100%; height:100%; object-fit:cover;}
+.squad-player-name { margin-top:12px; font-size:15px; font-weight:600; color:var(--text);}
+.squad-player-role { font-size:12px; color:var(--text-topbar);}
+.squad-player a { text-decoration: none;}
+
+/* =========================================================
+   ESTATÍSTICAS DA EQUIPA — KEY STATS
+   ========================================================= */
+
+/* Card principal */
+.key-stats-card {
+  /* background:#fbfdff; */
+  /* border:1px solid #eef2f6; */
+  /* border-radius:12px; */
+  padding:18px 28px;
+  display:flex;
+  gap:28px;
+  align-items:flex-start;
+  max-width:1200px;
+  margin:12px auto;
+  box-shadow:0 1px 0 rgba(10,15,28,0.02);
+}
+
+/* Coluna esquerda */
+.ks-left { width:320px; min-width:260px; }
+.ks-title { font-size:20px; font-weight:700; color:#0a0f1c; margin-bottom:12px; }
+
+
+/* Coluna direita */
+.ks-right { flex:1; }
+.stats-grid {display:grid;grid-template-columns: repeat(8,1fr);gap: 7px;}
+
+.stat-item {
+  display:flex;
+  flex-flow:column nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: .4rem;
+  /* gap:.4rem; */
+  background: var(--surface);
+  text-align: left;
+  min-height:7.2rem;
+  padding:1.2rem;
+  /* border:1px solid #eef2f6; */
+  height: 100%;
+}
+
+.stat-number {font-size: 45px;font-weight: 400;font-weight: 900;color:var(--text);}
+.stat-label {font-size:13px;color:var(--text-topbar);margin-top:6px;text-transform: uppercase;}
+
+/* Responsivo */
+@media (max-width:900px){
+  .key-stats-card { flex-direction:column; align-items:stretch; padding:18px; }
+  .donut-and-bars { justify-content:flex-start; }
+  .stats-grid { grid-template-columns:1fr 1fr; }
+  .ks-left { width:auto; min-width:0; }
+}
+
+@media (max-width:480px){
+  .bars-list { width:100%; }
+  .donut-new { width:110px; height:110px; }
+  .donut-number-new { font-size:20px; }
+}
+
+
+
+
+
+
+
+/* ESCONDER scrollbar horizontal  no slider squadSTART */
+.squad-carousel {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE/Edge antigo */
+}
+
+.squad-carousel::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari */
+}
+/* ESCONDER scrollbar horizontal no slider equad END*/
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   UX SLIDER (PADRÃO UEFA)
+=============================== */
+
+/* Cursor geral */
+.mu-slider-track,
+.squad-carousel {
+  
+  user-select: none;
+}
+
+/* Quando está a arrastar */
+.mu-slider-track.dragging,
+.squad-carousel.dragging {
+  cursor: grabbing;
+}
+
+/* Cards clicáveis */
+.mu-card,
+.squad-player {
+  cursor: pointer;
+}
+
+/* Durante drag remove pointer */
+.mu-slider-track.dragging .mu-card,
+.squad-carousel.dragging .squad-player {
+  cursor: grabbing;
+}
+
+/* BLOQUEAR DRAG DE IMAGENS (🔥 resolve cursor vermelho) */
+.mu-card img,
+.squad-player img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Evita seleção acidental */
+.mu-slider-track,
+.squad-carousel,
+.mu-card,
+.squad-player {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.squad-player-img,
+.squad-player a
+{
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+
+
+
+
+
+.player-card img,
+.team-logo,
+.player-photo {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}

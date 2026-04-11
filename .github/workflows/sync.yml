@@ -1,0 +1,19 @@
+name: Actualizar Resultados
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Toda segunda às 9h
+  workflow_dispatch:   # Botão manual no GitHub
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Gerar JSON
+        run: node update_data.js
+      - name: Salvar no GitHub
+        run: |
+          git config user.name "Bot de Resultados"
+          git config user.email "bot@futebol.com"
+          git add dados.json
+          git commit -m "Dados actualizados via Google Sheets" || exit 0
+          git push

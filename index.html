@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Meta tags obrigatórias -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Website Leve e Responsivo</title>
+
+    
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="assets/css/firefox-fixes.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- CSS de página -->
+  <link rel="stylesheet" href="assets/css/pages/index.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <div id="header"></div>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main">
+
+    <!-- ================= HERO + SIDEBAR ================= -->
+    <div class="rioslag-carousel">
+      <div class="f1-grid">
+
+        <!-- HERO -->
+        <article class="f1-hero">
+          <img
+            src="assets/images/diversos/pagina_inicial/projectocampofilia-1920.webp"
+            srcset="
+              assets/images/diversos/pagina_inicial/projectocampofilia-768.webp 768w,
+              assets/images/diversos/pagina_inicial/projectocampofilia-1280.webp 1280w,
+              assets/images/diversos/pagina_inicial/projectocampofilia-1920.webp 1920w
+            "
+            sizes="100vw"
+            alt="Mundialito de futsal do FILIA FC"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+            decoding="async"
+          >
+          <div class="f1-hero-content">
+            <span class="f1-tag">FUTSAL</span>
+            <h1>Mundialito de futsal do FILIA</h1>
+          </div>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="f1-sidebar">
+          <a href="regulamento.html" class="f1-card-link">
+            <div class="f1-card">
+              <img src="assets/images/diversos/istockphoto-1178808605-1024x1024.jpg" alt="">
+              <h3>Documento completo com todas as regras da competição</h3>
+            </div>
+          </a>
+          <a href="ajustehorario.html" class="f1-card-link">
+            <div class="f1-card">
+              <img src="assets/images/diversos/istockphoto-1169058171-1024x1024.jpg" alt="">
+              <h3>Nota oficial da organização sobre ajustes de horário</h3>
+            </div>
+          </a>
+          <a href="criterios.html" class="f1-card-link">
+            <div class="f1-card">
+              <img src="assets/images/diversos/istockphoto-1186117863-1024x1024.jpg" alt="">
+              <h3>Entenda como funciona a classificação em caso de igualdade</h3>
+            </div>
+          </a>
+          <a href="disciplina.html" class="f1-card-link">
+            <div class="f1-card">
+              <img src="assets/images/diversos/istockphoto-1287265518-1024x1024.jpg" alt="">
+              <h3>Informações sobre acumulação de faltas, penalizações e cartões</h3>
+            </div>
+          </a>
+          <a href="elegibilidade.html" class="f1-card-link">
+            <div class="f1-card">
+              <img src="assets/images/diversos/istockphoto-1406548506-1024x1024.jpg" alt="">
+              <h3>Quem pode jogar, prazos de inscrição e elegibilidade</h3>
+            </div>
+          </a>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- ================= JOGOS ================= -->
+    <section class="rioslag-carousel">
+      <div class="matches-header">
+        <h2>Jogos</h2>
+      </div>
+      <div class="matches-wrapper">
+        <button class="matches-arrow left" aria-label="Previous">‹</button>
+        <div class="matches-track" id="matchesTrack"></div>
+        <button class="matches-arrow right" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <!-- ================= DISCIPLINA ================= -->
+    <section class="entrelag-calendar-sync">
+      <div class="entrelag-calendar-sync__inner">
+        <h2 class="entrelag-calendar-sync__title">DISCIPLINA</h2>
+        <p class="entrelag-calendar-sync__subtitle">
+          A tabela reune todas as penalizacoes e o registo disciplinar de todos os 
+          participantes da competicao. Nela contem cartoes, suspensoes e demais sancoes
+          aplicadas conforme o regulamento.
+        </p>
+        <a href="#" class="hero-btn">TABELA DISCIPLINAR</a>
+      </div>
+    </section>
+
+    <!-- ================= POSIÇÃO NA TABELA ================= -->
+    <section class="rioslag-carousel">
+      <div class="matches-header"><h2>Posição na tabela</h2></div>
+      <div class="standings-track" id="standings-track"></div>
+    </section>
+
+    <!-- ================= MELHORES MARCADORES ================= -->
+    <section class="rioslag-carousel">
+      <div class="matches-header"><h2>Melhores marcadores</h2></div>
+      <div id="topscorers-track" class="carousel-track"></div>
+      <a href="melhoresmarcadores.html" class="all-players-link">VER ESTATISTICAS →</a>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+  <script src="assets/js/pages/jogadoresdedestaque.js"></script>
+  <script src="assets/js/pages/theme.js"></script>
+  <script src="assets/js/pages/matches.js"></script>
+  <script src="assets/js/pages/standings.js"></script>
+
+
+  
+
+</body>
+</html>
