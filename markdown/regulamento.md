@@ -1,6 +1,6 @@
 # Regulamento Oficial
 
-Last Updated: 01/04/2026
+**Última atualização:** 01/04/2026
 
 ## Disposições Gerais
 
@@ -11,7 +11,12 @@ Last Updated: 01/04/2026
 
 ## Participação
 
-1) Cada equipa deve estar devidamente inscrita.  
-2) Apenas jogadores registados podem participar.  
+1) As equipas foram formadas mediante sorteio dos jogadores realizado pela organização.  
+2) Apenas os jogadores atribuídos por sorteio podem participar na competição.  
 
-*Nota: A organização reserva-se o direito de alterar regras.*
+
+
+## Aviso
+
+O **Regulamento Oficial completo** onde estarão detalhadas todas as normas, 
+procedimentos e critérios da competição será publicado em breve.

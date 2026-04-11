@@ -1,17 +1,19 @@
 # Critérios de Classificação
 
-Last Updated: 01/04/2026
+**Última atualização:** 01/04/2026
 
-## Pontuação
+## Classificação
 
-• Vitória: 3 pontos  
-• Empate: 1 ponto  
-• Derrota: 0 pontos  
+A classificação das equipas será definida pelo número de pontos obtidos na competição, de acordo com o regulamento oficial do Mundialito de Futsal do Filia.
 
-## Desempate
+Em caso de igualdade de pontos entre duas ou mais equipas, serão aplicados os seguintes critérios de desempate, por ordem de prioridade:
 
-1) Diferença de golos  
-2) Golos marcados  
-3) Confronto direto  
+1) **Confronto direto** entre as equipas empatadas  
+2) **Diferença de golos** nos jogos entre as equipas envolvidas  
+3) **Número de golos marcados** nos jogos entre as equipas envolvidas  
+4) **Diferença de golos geral**  
+5) **Número total de golos marcados**  
+6) **Menor número de cartões disciplinares** (fair-play)  
+7) **Sorteio** realizado pela organização  
 
-[[Importante: Em caso de empate total, será realizado sorteio.]]
+[[Importante: Os critérios seguem o regulamento oficial do Mundialito de Futsal do Filia.]]

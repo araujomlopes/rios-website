@@ -1,15 +1,9 @@
 # Ajuste de Horário
 
-Last Updated: 01/04/2026
 
-## Regras de Ajuste
 
-• Jogos podem ser reagendados mediante acordo entre equipas.  
-• Alterações devem ser comunicadas com antecedência mínima de 24h.  
+## Aviso
 
-## Condições
+Por enquanto, todos os jogos seguem o **horário previamente estabelecido** e não existe qualquer alteração ao calendário oficial. Até ao momento, não há mudanças, reagendamentos ou atualizações a comunicar.
 
-1) Ambas as equipas devem aceitar a alteração.  
-2) A organização deve validar o novo horário.  
-
-[[Importante: Ajustes não autorizados serão ignorados.]]
+Qualquer futura alteração será devidamente comunicada pela organização através dos canais oficiais.
