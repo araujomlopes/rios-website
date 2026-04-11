@@ -1,6 +1,6 @@
 # Ajuste de Horário
 
-
+**Última atualização:** 01/04/2026
 
 ## Aviso
 

@@ -245,3 +245,6 @@ card.dataset.player = encodeURIComponent(d.nameOriginal);
 }
 
 updateOfficialGrid();
+
+
+

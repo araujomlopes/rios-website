@@ -1,6 +1,6 @@
 # Elegibilidade
 
-**Last Updated:** 01/04/2026
+**Última atualização:** 01/04/2026
 
 ## Requisitos
 
