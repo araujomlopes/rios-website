@@ -1316,8 +1316,8 @@ padding:20px 0;
 
 .footer-bottom-inner{
 display:flex;
-justify-content:space-between;
-align-items:center;
+justify-content:center;
+
 max-width: 1200px;
 margin-top: 10px;
 margin-bottom: 10px;
