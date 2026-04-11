@@ -437,9 +437,9 @@
 
   /* 🔥 ESSENCIAL MOBILE */
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
 
-  scrollbar-width: none;
+  
+  
 }
 
 .matches-track::-webkit-scrollbar {

@@ -214,7 +214,7 @@
 
 
 /* Aplica apenas para o slider de jogos */
-.mu-slider-track, .squad-carousel {
+.mu-slider-track {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }

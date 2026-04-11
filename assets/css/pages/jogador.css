@@ -287,13 +287,26 @@
 .mu-slider-title { font-size:28px; color:var(--text); display:flex; justify-content:space-between; align-items:center; width:100%; }
 .mu-slider-link { color:var(--text-topbar); font-size:16px; font-weight:700; text-decoration:none; border-style:none; cursor:pointer; }
 .mu-slider { position:relative; overflow:hidden; padding-inline:24px; }
-.mu-slider-track { display:flex; gap:16px; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none; cursor:grab; padding:8px 0; }
+
+.mu-slider-track { 
+  display:flex; 
+  gap:16px; 
+  overflow-x:auto; 
+  scrollbar-width:none; 
+  -ms-overflow-style:none; 
+  cursor:grab; 
+  padding:8px 0; 
+}
 
 
 
-.mu-slider-track, .teammates-carousel  {
-  position: relative;
-  overflow: hidden;
+
+
+
+
+.mu-slider-track, 
+.teammates-carousel  {
+
 
   /* FADE LATERAL (versão light) */
   -webkit-mask-image: linear-gradient(
@@ -320,6 +333,45 @@
 
 
 .mu-slider-track::-webkit-scrollbar { display:none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .mu-card { background:var(--surface); border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,.08); padding:20px; flex:0 0 267px; text-align:center; user-select:none; }
 .mu-card img { pointer-events:none; }
 .mu-card .league { width:150px; margin-bottom:10px; }
