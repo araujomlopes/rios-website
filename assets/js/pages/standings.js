@@ -74,14 +74,18 @@ function calculateStandings(matches) {
 /* =====================================================
    RENDER CLASSIFICAÇÃO
    ===================================================== */
-function renderStandings(teams) {
+function renderStandings(teams, logos) {
   const track = document.querySelector("#standings-track");
   if (!track) return;
   track.innerHTML = "";
 
   teams.forEach((team, index) => {
-    const logoName = formatTeamToLogo(team.name);
-    const logoPath = `assets/images/team-logo/logo_${logoName}.svg`;
+    const key = formatTeamToLogo(team.name);
+const logoFile = logos[key];
+
+const logoPath = logoFile
+  ? `assets/images/team-logo/${logoFile}`
+  : "assets/images/team-logo/default.svg";
 
     const card = document.createElement("div");
     card.className = "standing-card";
@@ -112,8 +116,20 @@ async function initStandings() {
   const data = await loadJSON();
   if (!data) return;
   const matches = data.ficha_jogo || [];
+
   const standings = calculateStandings(matches);
-  renderStandings(standings);
+
+// 🔥 NOVO: criar mapa de logos
+const equipas = data.equipas || [];
+const logos = {};
+
+equipas.forEach(e => {
+  const key = formatTeamToLogo(e.Team);
+  logos[key] = e.Logopng ? e.Logopng.trim() : "";
+});
+
+// 🔥 passar logos para render
+renderStandings(standings, logos);
 }
 
 window.addEventListener("DOMContentLoaded", initStandings);

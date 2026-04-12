@@ -1,11 +1,11 @@
  // Cores oficiais de cada equipa inicio
 const teamColors = {
-  "Equipa 1": "#3E92CE",
-  "Equipa 2": "#FFA500",
-  "Equipa 3": "#014e96",
-  "Equipa 4": "#5d7a82",
-  "Equipa 5": "#213E76",
-  "Equipa 6": "#DDAED7"
+  "Ubuntu UD": "#3E92CE",
+  "Unguvu": "#FFA500",
+  "Fusion AD": "#014e96",
+  "Los Hermanos": "#5d7a82",
+  "Bairro Central FC": "#213E76",
+  "Los Compadres": "#DDAED7"
 };
  // Cores oficiais de cada equipa fim
 
