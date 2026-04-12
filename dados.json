@@ -8,29 +8,39 @@
       "AwayGoals": "3",
       "AwayTeam": "Unguvu",
       "ScorersHome": [
-        "Silva:10"
+        "Boby:1",
+        "Casemiro:4",
+        "Guebas:3"
       ],
-      "ScorersAway": [],
+      "ScorersAway": [
+        "Elton:1",
+        "Bacar:1",
+        "Mandava:1"
+      ],
       "AssistsHome": [],
       "AssistsAway": [],
-      "YellowsHome": [
-        "Chiquinho",
-        "Chiquinho",
-        "Guga",
-        "Silva"
-      ],
+      "YellowsHome": [],
       "YellowsAway": [],
-      "RedsHome": [
-        "Silva"
-      ],
+      "RedsHome": [],
       "RedsAway": [],
       "HomeGK": "",
       "AwayGK": "",
       "PlayersHome": [
-        "Chiquinho",
-        "Silva"
+        "Boby",
+        "Paulo",
+        "Casemiro",
+        "Guebas",
+        "Guga",
+        "Rui",
+        "Chiquinho"
       ],
-      "PlayersAway": [],
+      "PlayersAway": [
+        "Bacar",
+        "Elton",
+        "Puco",
+        "Takuara",
+        "Mandava"
+      ],
       "Time": "8:30",
       "Local do jogo": "Porto",
       "Yellow red Home": "",
@@ -43,20 +53,44 @@
       "HomeGoals": "3",
       "AwayGoals": "2",
       "AwayTeam": "Los Hermanos",
-      "ScorersHome": [],
-      "ScorersAway": [],
+      "ScorersHome": [
+        "Hilário:2",
+        "Ivan:1"
+      ],
+      "ScorersAway": [
+        "Lupula:1",
+        "Edinho:1"
+      ],
       "AssistsHome": [],
       "AssistsAway": [],
       "YellowsHome": [],
-      "YellowsAway": [],
+      "YellowsAway": [
+        "Lupula"
+      ],
       "RedsHome": [],
       "RedsAway": [],
       "HomeGK": "",
       "AwayGK": "",
       "PlayersHome": [
-        "Araujo"
+        "Araújo",
+        "Zé",
+        "Félix",
+        "Dito",
+        "Hilário",
+        "Omar",
+        "Ivan"
       ],
-      "PlayersAway": [],
+      "PlayersAway": [
+        "Gabriel",
+        "Pitecas",
+        "Betinho",
+        "Mantorras",
+        "Tony",
+        "Lupula",
+        "Maporiza",
+        "Hélder",
+        "Edinho"
+      ],
       "Time": "9:30",
       "Local do jogo": "Porto",
       "Yellow red Home": "",
@@ -79,7 +113,13 @@
       "RedsAway": [],
       "HomeGK": "",
       "AwayGK": "",
-      "PlayersHome": [],
+      "PlayersHome": [
+        "Edú",
+        "Marvin",
+        "Kelvin",
+        "Montana",
+        "Dembeé"
+      ],
       "PlayersAway": [],
       "Time": "10:30",
       "Local do jogo": "Porto",
@@ -693,9 +733,7 @@
       "HomeGoals": "",
       "AwayGoals": "",
       "AwayTeam": "Fusion AD",
-      "ScorersHome": [
-        "Quintas:10"
-      ],
+      "ScorersHome": [],
       "ScorersAway": [],
       "AssistsHome": [],
       "AssistsAway": [],
