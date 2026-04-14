@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Website Leve e Responsivo</title>
+
+   
+
+  <!-- Google Fonts (RIOS-style) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+  <!-- CSS Geral -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/estatisticaspublicacao.css">
+</head>
+
+<body>
+ <!-- ========== HEADER ========== -->
+  <div id="header"></div>
+   <!-- ========== HEADER ========== -->
+
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+
+    <!-- ========== TÍTULO ========== -->
+    <div class="page-header_title">
+      <h1 class="section--title bigTitle pk-font-size--xl2 pk-font-size-md--xl4">
+        <span class="page-header_title-text">
+          <h2></h2>
+        </span>
+      </h1>
+    </div>
+
+    <!-- =========================================================
+         SLIDER 6 MAIORES MARCADORES
+         ========================================================= -->
+    <div class="maioresmarcadores-container">
+
+      <!-- ===== CAROUSEL Ufa ===== -->
+      <section class="rioslag-carousel">
+
+        <div class="carousel-header">
+          <h2>Melhores marcadores</h2>
+        </div>
+
+        <div class="carousel-container">
+          <button class="carousel-btn left" aria-label="Previous">‹</button>
+
+          <div class="carousel-track"></div>
+
+          <button class="carousel-btn right" aria-label="Next">›</button>
+        </div>
+      </section>
+
+      <!-- ===== BARRA DE PESQUISA ===== -->
+      
+
+      <!-- ===== GRID OF OFFICIAL PLAYERS ===== -->
+      <section class="official-section">
+        <h2 class="official-title"></h2>
+        <div class="official-grid" id="official-grid"></div>
+      </section>
+
+    </div>
+
+  </main>
+
+  
+   <!-- FOOTER (injetado via JS start) -->
+    <div id="footer"></div>
+    <!-- FOOTER (injetado via JS end) -->
+
+  <!-- JS -->
+  <script src="assets/js/pages/estatisticaspublicacao.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+
+
+
+  <script src="assets/js/pages/theme.js"></script>
+
+
+
+  
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rios — Estrutura leve e responsiva — HTML e CSS puro, boas práticas de escritórios de design." />
+  <title>Rios — Website Leve e Responsivo</title>
+
+   
+
+  <!-- Google Fonts (RIOS-style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Geral -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/paginapublicacao.css">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <div id="header"></div>
+  <!-- ========== HEADER ========== -->
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+
+    <!-- TABELA DE PONTUAÇÃO -->
+    <div class="tabelapontos-container">
+      <h2 class="teams-title">Tabela de pontuação</h2>
+
+     
+
+      <section class="rioslag-table">
+
+        <!-- HEADER -->
+        <div class="header-box">
+          <div class="tabs">
+            <button class="tab active" data-view="simplified">Tabela resumida</button>
+            <button class="tab" data-view="full">Tabela completa</button>
+          </div>
+        </div>
+
+        <!-- TABELA RESUMIDA -->
+        <table id="simplified" class="active">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Equipa</th>
+              <th>P</th>
+              <th>+/-</th>
+              <th>Pts</th>
+              <th class="text-right">Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- preenchido via JS -->
+          </tbody>
+        </table>
+
+        <!-- TABELA COMPLETA -->
+        <div class="scroll-wrapper">
+          <table id="full">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Logo</th>
+                <th>Equipa</th>
+                <th>J</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>GM</th>
+                <th>GS</th>
+                <th>DG</th>
+                <th>P</th>
+                <th class="text-right">F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- preenchido via JS -->
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- FOOTER (injetado via JS) -->
+  <div id="footer"></div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/pages/paginapublicacao.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/header-nav.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/pages/theme.js"></script>
+</body>
+</html>

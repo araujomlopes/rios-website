@@ -1,0 +1,984 @@
+.rioslag-table,
+    .rioslag-table * {
+      box-sizing: border-box;
+      
+    }
+
+    .rioslag-table {
+      max-width: none;
+      margin: 0 auto;
+      color: var(--text-dynamic);
+
+      
+
+      
+      
+      
+    }
+
+    /* === league phase HEADER BOX === */
+    .rioslag-table .header-box {
+
+      
+      
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+
+    
+    .rioslag-table .title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #513e37;
+      margin:20px 0 16px ;
+    }
+
+    /* Tabs */ /* === onde contem botoes === */
+    .rioslag-table .tabs {
+      display: flex;
+      gap: 8px;
+      background: #f1f3f8;
+      border-radius: 12px;
+      padding: 6px;
+      width: fit-content;
+    }
+
+    /*botoes === */
+    .rioslag-table .tab {
+      background: transparent;
+      padding: 10px 28px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .rioslag-table .tab.active {
+      background: #ffffff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* === TABLE STYLE === */
+    .rioslag-table table {
+      width: 100%;
+      border-collapse: collapse;
+      
+
+      display: none;
+    }
+
+    .rioslag-table table.active {
+     
+      border-radius: 16px;
+      display:table;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+
+    
+
+    .rioslag-table th {
+      font-size: 12px;
+      color: var(--text-topbar);
+      text-align: left;
+      font-weight: 500;
+      padding: 12px 8px;
+      border-bottom: 1px solid  var(--line);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .rioslag-table td {
+      padding: 14px 8px;
+      font-size: 14px;
+      
+      
+      border-left: none;
+      border-right: none;
+      vertical-align: middle;
+      
+      transition: background-color 0.25s ease;
+    }
+
+    .rioslag-table tr{
+      border-bottom: 1px solid  var(--line);
+      
+    }
+
+    /* Hover Effect */
+    @media (hover: hover) {
+      .rioslag-table tr:hover td {
+        background-color: var(--bg);
+      }
+      .rioslag-table tr:hover {
+        border-radius: 12px;
+      }
+      
+    }
+
+    /* Team */
+    .rioslag-table .team {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .rioslag-table .team img {
+      width: 30px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 0;
+    }
+
+
+
+    /* Form */
+    .rioslag-table .form {
+      display: flex;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+
+    .rioslag-table .form span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      font-size: 0px;
+      font-weight: 700;
+      border: none;
+    }
+
+    
+
+    .rioslag-table .win { background: #24a225; }
+    .rioslag-table .draw { background: #fbb700; }
+    .rioslag-table .loss { background: red; }
+
+    /* Mobile Scroll Wrapper */
+    @media (max-width: 1024px) {
+      .rioslag-table .scroll-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 16px;
+        
+      }
+
+      .rioslag-table #full {
+        min-width: 1000px;
+      }
+
+      /* Colunas fixas mantidas, sem linhas verticais */
+      .rioslag-table #full th:first-child,
+      .rioslag-table #full td:first-child {
+        position: sticky;
+        left: 0;
+        background: var(--surface);
+        z-index: 4;
+        width: 45px;
+        text-align: center;
+        box-shadow: none;
+      }
+
+      .rioslag-table #full th:nth-child(2),
+      .rioslag-table #full td:nth-child(2) {
+        position: sticky;
+        left: 45px;
+        background: var(--surface);
+        z-index: 3;
+        width: 60px;
+        text-align: center;
+        box-shadow: none;
+      }
+    }
+
+    /* === MOBILE: limitar a 3 bolinhas no FORM === */
+@media (max-width: 600px) {
+  .form span:nth-child(n+4),
+  .match-form:nth-child(n+4) {
+    display: none !important;
+  }
+}
+
+/* Impedir que o .tabs atravesse a tela no mobile */
+@media (max-width: 600px) {
+  .rioslag-table .tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    scrollbar-width: none;       /* Firefox */
+  }
+
+  .rioslag-table .tabs::-webkit-scrollbar {
+    display: none;               /* Chrome/Safari */
+  }
+}
+
+/* Reduzir padding das tabs no mobile */
+@media (max-width: 600px) {
+  .rioslag-table .tab {
+    padding: 6px 10px !important;
+  }
+}
+
+
+
+
+
+/* === TELAS MUITO PEQUENAS: esconder FORM completamente === */
+@media (max-width: 420px) {
+
+  /* Esconde a coluna Form (header e células) */
+  .rioslag-table th:last-child,
+  .rioslag-table td:last-child {
+    display: none !important;
+  }
+
+  /* Segurança extra: esconde o container do form */
+  .rioslag-table .form {
+    display: none !important;
+  }
+}
+
+
+
+/* =========================================================
+   TABELA DE PONTUAÇÃO — FORM (BOLINHAS DE RESULTADO)
+   Página: tabeladepontuacao.html
+   Descrição: Indicadores visuais de vitória, empate e derrota
+   ========================================================= */
+.match-form {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-left: 4px;
+}
+
+.match-form.win {
+  background-color: #24a225;
+}
+
+.match-form.draw {
+  background-color: #fbb700;
+}
+
+.match-form.loss {
+  background-color: red;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* =========================================================
+   TABELA DE PONTUAÇÃO — FORM (BOLINHAS DE RESULTADO)
+   Página: tabeladepontuacao.html
+   Descrição: Indicadores visuais de vitória, empate e derrota
+   ========================================================= */
+
+
+
+
+
+
+
+
+   /* ==============================
+   TABELA DE PONTUAÇÃO — LAYOUT
+   ============================== */
+
+.tabelapontos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+
+.rioslag-table {
+  background: var(--surface);
+  padding: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+.simplified{
+  background: red;
+}
+
+
+
+
+
+
+
+
+
+/* === CENTRALIZAR COLUNAS NUMÉRICAS === */
+#simplified th:nth-child(3),
+#simplified th:nth-child(4),
+#simplified th:nth-child(5),
+#simplified td:nth-child(3),
+#simplified td:nth-child(4),
+#simplified td:nth-child(5),
+
+#full th:nth-child(4),
+#full th:nth-child(5),
+#full th:nth-child(6),
+#full th:nth-child(7),
+#full th:nth-child(8),
+#full th:nth-child(9),
+#full th:nth-child(10),
+#full th:nth-child(11),
+
+#full td:nth-child(4),
+#full td:nth-child(5),
+#full td:nth-child(6),
+#full td:nth-child(7),
+#full td:nth-child(8),
+#full td:nth-child(9),
+#full td:nth-child(10),
+#full td:nth-child(11) {
+  text-align: center;
+  color: var(--text-topbar);
+}
+
+/* === COR DO TEXTO DA COLUNA PONTUACAO INICIO === */
+#simplified td:nth-child(5) b {
+  color: var(--text);
+}
+
+#full td:nth-child(11) b {
+  color: var(--text);
+}
+/* === COR DO TEXTO DA COLUNA PONTUACAO FIM === */
+
+/* === COR DO TEXTO DA COLUNA EQUIPAS INICIO === */
+#simplified td:nth-child(2) .team span {
+  color: var(--text); /* muda aqui a cor */
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+
+#full td:nth-child(3) span {
+  color: var(--text); /* mesma cor ou outra */
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text);
+}
+/* === COR DO TEXTO DA COLUNA EQUIPAS FIM === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === FORM CENTRALIZADO === */
+.rioslag-table th.text-right {
+  text-align: center;
+}
+
+.rioslag-table td:last-child {
+  text-align: center;
+}
+
+.rioslag-table td:last-child .form {
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RIOS – TRACK CONDITIONS (FIDELIDADE REAL)
+   ========================================= */
+.entrelag-track-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;                 /* espaçamento real */
+  background: var(--surface);
+  padding: 12px 20px;        /* igual RIOS */
+  
+  
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.track-item .label {
+  font-size: 12px;
+  color: var(--text-topbar);
+}
+
+.track-item .value {
+  font-size: 13px;
+  font-weight: 600;
+  
+  color: var(--text-dynamic);
+}
+
+.track-item.weather {
+  gap: 10px;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.track-sep {
+  width: 1px;
+  height: 26px;
+  background: var(--line);
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  .entrelag-track-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 18px;
+    padding: 12px 14px;
+  }
+
+  .track-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .track-item .label {
+    font-size: 11px;
+    color: #7a7a7a;
+  }
+
+  .track-item .value {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* exceção do tempo (ícone + graus) */
+  .track-item.weather {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .weather-info {
+    flex-direction: column;
+  }
+
+  .track-sep {
+    height: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .tabelapontos-container
+ {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0px;
+    padding-top: 60px;
+    padding-bottom: 35px;
+}
+
+.teams-title {
+  padding-left: 16px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+.teams-title {
+    font-size: 28px;
+    margin: 0 0 26px 0;
+    color: var(--text);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* resto dos itens continuam verticais */
+.track-item:not(.weather) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: center;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px; /* 🔥 espaço entre nome e valor */
+}
+
+
+
+
+
+
+
+
+
+
+.weather-icon svg{
+  width: 35px;          /* 🔥 maior */
+  height: 35px;
+  stroke-width: 2.2;    /* 🔥 mais grosso */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+.weather-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.15); /* 🔥 aumenta só o desenho */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === LOGO + NOME CENTRALIZADOS === */
+.rioslag-table .team-cell,
+.rioslag-table .team {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 8px;            /* espaço entre logo e nome */
+}
+
+.rioslag-table .team-cell a,
+.rioslag-table .team a {
+  text-decoration: none; /* remove sublinhado */
+  color: inherit;        /* mantém cor do texto */
+  display: flex;         /* flex para centralização vertical */
+  align-items: center;
+}
+
+.rioslag-table .team-cell img,
+.rioslag-table .team img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hover discreto */
+.rioslag-table .team-cell a:hover img,
+.rioslag-table .team-cell a:hover span,
+.rioslag-table .team a:hover img,
+.rioslag-table .team a:hover span {
+  opacity: 0.8;
+}
+
+/* Ajuste específico do simplified */
+#simplified .team-name-link span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full table - centralizar verticalmente logo e nome */
+#full td.team-logo-cell,
+#full td.team-name-cell {
+  
+  align-items: center; /* centraliza verticalmente */
+}
+
+/* Links dentro de full table */
+#full td.team-logo-cell a,
+#full td.team-name-cell a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* remove sublinhado */
+  color: inherit;        /* mantém cor do texto */
+  gap: 8px;
+}
+
+/* Logo */
+#full td.team-logo-cell img {
+  width: 60px;
+  height:60px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hover discreto */
+#full td.team-logo-cell a:hover img,
+#full td.team-name-cell a:hover span {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+/* Diferença de golos (forçar prioridade) */
+.diff-positive {
+  color: #1fc779 !important;
+}
+
+.diff-negative {
+  color: #ff404a !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   🔥 TEMA (GRADIENTE + GLASS)
+   COLE NO FINAL DO CSS
+   ========================================= */
+
+/* FUNDO PRINCIPAL */
+.tabelapontos-container {
+  background: linear-gradient(180deg, #1a2bb8 0%, #0b0f5a 100%);
+  border-radius: 9px;
+  padding: 20px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  border: 1px solid;
+  border-color: #585858;
+}
+
+/* CARD PRINCIPAL */
+.rioslag-table {
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* HEADER BOX (remover estilo branco antigo) */
+.rioslag-table .header-box {
+  background: transparent !important;
+  padding: 10px 0;
+}
+
+/* ===============================
+   TABS (ESTILO UEFA)
+   =============================== */
+
+.rioslag-table .tabs {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding: 0;
+}
+
+.rioslag-table .tab {
+  color: rgba(255,255,255,0.6);
+  padding: 10px 16px;
+}
+
+.rioslag-table .tab.active {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #2fd3ff;
+  position: relative;
+}
+
+.rioslag-table .tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #2fd3ff;
+  border-radius: 3px;
+}
+
+/* ===============================
+   TABELA
+   =============================== */
+
+.rioslag-table th {
+  color: #fff !important;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.rioslag-table td {
+  color: #ffffff;
+}
+
+/* LINHAS */
+.rioslag-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.151);
+}
+
+@media (hover: hover) {
+  .rioslag-table tr:hover td {
+    background: rgba(255,255,255,0.05) !important;
+  }
+}
+
+/* ===============================
+   TRACK BAR (WEATHER)
+   =============================== */
+
+.entrelag-track-bar {
+  background: rgba(255,255,255,0.06) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+}
+
+.track-item .label {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.track-item .value {
+  color: #ffffff !important;
+}
+
+.track-sep {
+  background: rgba(255,255,255,0.2) !important;
+}
+
+/* ===============================
+   TEXTO
+   =============================== */
+
+.teams-title {
+  color: #ffffff !important;
+}
+
+#simplified td:nth-child(2) .team span,
+#full td:nth-child(3) span {
+  color: #ffffff !important;
+}
+
+
+
+/* ===============================
+   SCROLL WRAPPER
+   =============================== */
+
+
+
+/* ===============================
+   COLUNAS FIXAS MOBILE (IMPORTANTE)
+   =============================== */
+
+@media (max-width: 1024px) {
+  .rioslag-table #full th:first-child,
+  .rioslag-table #full td:first-child,
+  .rioslag-table #full th:nth-child(2),
+  .rioslag-table #full td:nth-child(2) {
+    background: rgba(10, 15, 90, 0.95) !important;
+  }
+}
+
+
+
+
+
+
+/* === CENTRALIZAR COLUNAS NUMÉRICAS === */
+#simplified th:nth-child(3),
+#simplified th:nth-child(4),
+#simplified th:nth-child(5),
+#simplified td:nth-child(3),
+#simplified td:nth-child(4),
+#simplified td:nth-child(5),
+
+#full th:nth-child(4),
+#full th:nth-child(5),
+#full th:nth-child(6),
+#full th:nth-child(7),
+#full th:nth-child(8),
+#full th:nth-child(9),
+#full th:nth-child(10),
+#full th:nth-child(11),
+
+#full td:nth-child(4),
+#full td:nth-child(5),
+#full td:nth-child(6),
+#full td:nth-child(7),
+#full td:nth-child(8),
+#full td:nth-child(9),
+#full td:nth-child(10),
+#full td:nth-child(11) {
+  text-align: center;
+  color: #ffffff83;
+  font-size: 20px;
+}
+
+
+
+
+
+/* === COR DO TEXTO DA COLUNA PONTUACAO INICIO === */
+#simplified td:nth-child(5) b {
+  color: #fff;
+}
+
+#full td:nth-child(11) b {
+  color: #fff;
+}
+/* === COR DO TEXTO DA COLUNA PONTUACAO FIM === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main
+ {
+    flex: 1 0 auto;
+    background-color: #000040;
+}
